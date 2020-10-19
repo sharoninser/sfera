@@ -1,0 +1,143 @@
+body {
+    font-family: 'Exo 2.0', sans-serif;
+    font-weight: 400;
+}
+h1  {
+    font-family: 'Exo 2.0', sans-serif;
+    font-weight: 700;
+    color: #242c2e;
+    font-size: 64px;
+    line-height: 46px;
+    text-align: left;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+h2 {
+    font-family: 'Exo 2.0', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.screen {
+    padding-left: 8.2%;
+    padding-right: 8.2%;
+}
+// light
+.screen.light h2 {
+    color: #242c2e;
+}
+.screen.light .screen-slider-nav-arrow svg {
+    fill: #455458;
+}
+.screen.light .screen-slider-nav p.screen-slider-nav__counter {
+    color: #455458;
+}
+
+// dark
+.screen.dark h2 {
+    color: #ffffff;
+}
+.screen.dark p, .screen.dark p span, .screen.dark ul li {
+    color: #fff;
+}
+.screen.dark .screen-slider-nav-arrow svg {
+    fill: #fff;
+}
+.screen.dark .screen-slider-nav p.screen-slider-nav__counter, .screen.dark .screen-slider-nav p.screen-slider-nav__counter > span {
+    color: #a0c5cf;
+}
+
+.container {
+    width: 100%;
+    // max-width: 76%;
+    max-width: 1270px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+.breadcrumb {
+    margin-bottom: 50px;
+}
+.breadcrumb ul {
+    display: flex;
+}
+.breadcrumb ul li {
+    position: relative;
+}
+.breadcrumb ul li + li {
+    margin-left: 41px;
+}
+.breadcrumb ul li + li:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -20px;
+    width: 1px;
+    height: 100%;
+    background-color: #dee4e3;
+}
+.breadcrumb ul li a, .breadcrumb ul li span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.breadcrumb ul li a {
+    color: #a0c5cf;
+    text-decoration: none;
+}
+.breadcrumb ul li span {
+    color: #6f888f;
+    cursor: default;
+}
+
+.screen.dark ul li {
+    position: relative;
+    padding-left: 15px;
+}
+.screen.dark ul li:before {
+    position: absolute;
+    content: '';
+    top: 20px;
+    left: 0;
+    width: 8px;
+    height: 1px;
+    background-color: #fff;
+}
+p {    
+    color: #242c2e;
+    font-size: 24px;
+    line-height: 48px;
+    font-weight: 300;
+}
+p span {
+    font-weight: 700;
+}
+p + p {
+    margin-top: 50px;
+}
+     
+// slider-nav
+.screen-slider-nav {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+.screen-slider-nav > span {
+    cursor: pointer;
+}
+.screen-slider-nav p.screen-slider-nav__counter {
+    min-width: 84px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+}
+.screen-slider-nav-arrow svg {
+    width: 12px;
+    height: 10px;
+}
+
