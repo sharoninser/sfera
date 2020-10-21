@@ -63,6 +63,28 @@ document.addEventListener('DOMContentLoaded', () => {
 		// 	}
 		// ]
     });
+
+    // content-slider
+    $('.section-content-slider').slick({
+        // loop: true,
+        swipe: false,
+        dots: true,
+        centerMode: true,
+        infinite: true,
+		slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,        
+		prevArrow: '#section-content-slider-arrow_prev',
+		nextArrow: '#section-content-slider-arrow_next'
+		// responsive: [
+		// 	{
+		// 		breakpoint: 576,
+		// 		settings: {
+		// 			arrows: false
+		// 		}
+		// 	}
+		// ]
+    });
     
     // counter sliders
     let slidersArray = document.querySelectorAll('.js-slider');
