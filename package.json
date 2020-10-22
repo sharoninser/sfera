@@ -16,5 +16,6 @@
     "gulp-ftp": "^1.1.0",
     "gulp-sass": "^4.1.0"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {}
 }
