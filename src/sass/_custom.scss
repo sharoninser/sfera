@@ -12,7 +12,7 @@ h1  {
     margin-bottom: 32px;
     text-transform: uppercase;
     width: 100%;
-    max-width: 1380px;
+    max-width: 1455px;
 }
 h2 {
     font-family: 'Exo 2.0', sans-serif;
@@ -72,8 +72,14 @@ h4 {
 
 .container {
     width: 100%;
-    // max-width: 76%;
     max-width: 1270px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+.container-fluid {
+    width: 100%;
+    max-width: 1590px;
     padding-left: 30px;
     padding-right: 30px;
     margin: 0 auto;
