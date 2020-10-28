@@ -808,12 +808,18 @@
                     width: 41px
                     height: 29px            
             &-block
+                display: flex   
+                align-items: center
+                justify-content: space-between
                 background-color: #000
+                position: relative
             &-wrap
+                margin-right: -52px
+                width: calc(100% + 52px)
                 color: #fff
                 h2
                     width: 100%
-                    max-width: 57%
+                    max-width: 56%
                     margin-bottom: 26px
                     line-height: 72px
             &-content
@@ -830,7 +836,7 @@
                     background-color: #242c2e
                 .screen-main-links
                     padding-top: 25px
-                    padding-bottom: 36px
+                    padding-bottom: 33px
                     &-block + .screen-main-links-block
                         &::before
                             display: none
@@ -838,9 +844,9 @@
                         padding-right: 66px
                 &-date
                     display: flex
-                    padding-top: 40px
+                    padding-top: 44px
                     padding-left: 45px
-                    padding-bottom: 20px
+                    padding-bottom: 16px
                     &-item
                         margin-right: 10%
                     &-item
@@ -857,5 +863,164 @@
                             span
                                 font-size: 64px
                                 letter-spacing: 1.6px
+                    &-item
+                        &:last-child
+                            margin-right: auto\
+            &-slider
+                &-wrap
+                    position: absolute
+                    content: ''
+                    bottom: -67px
+                    right: 52px
+                    width: 100%
+                    max-width: 435px                    
+                    height: 332px
+                &-item
+                    position: relative
+                    height: 332px
+                    max-width: 435px
+                    &__img
+                        img
+                            object-fit: cover
+                            width: 100%
+                            height: 100%
+                    &__link
+                        position: absolute
+                        content: ''
+                        bottom: 0
+                        left: 0
+                        width: 100%
+                        height: 0px
+                        overflow: hidden
+                        visibility: hidden
+                        background-color: #000000 
+                        transition: all .3s
+                        color: #63cdd7
+                        font-size: 15px
+                        line-height: 65px
+                        text-transform: uppercase
+                        padding-left: 36px
+                        text-decoration: none
+                        transition: all .3s
+                &-arrow
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    position: absolute
+                    content: ''
+                    bottom: 67px
+                    width: 52px
+                    height: 179px
+                    background-color: #000000
+                    cursor: pointer
+                    svg
+                        fill: #fff
+                        width: 12px
+                        height: 10px
+                    &_prev
+                        left: -52px
+                    &_next
+                        left: auto
+                        right: -52px
+.screen-view-slider-wrap
+    &:hover
+        .screen-view-slider-item__link
+            height: 65px
+            visibility: visible
+            transition: all .3s
 
-                        
+
+
+/*                  OBJECT-CATALOG                     */
+.page-object-catalog
+    .screen.screen-one.light
+        padding-left: 9.9%    
+        padding-right: 9.9%    
+        &::before
+            display: none
+    .screen
+        &-top
+            padding-left: 0
+            padding-right: 0
+        &-catalog
+            &-list
+                &-filter
+                    display: flex
+                    &-block
+                        margin-bottom: 43px
+                    &-item + .screen-catalog-list-filter-item
+                        margin-left: 35px
+                    &-item
+                        a
+                            display: block
+                            color: #1f272a
+                            font-size: 16px
+                            line-height: 28px
+                            font-weight: 700
+                            text-transform: uppercase
+                            text-decoration: none
+                            padding-bottom: 0px
+                        a.active 
+                            color: #1291b6 
+                            border-bottom: 2px solid #1291b6
+                &-block
+                    display: flex
+                    justify-content: space-between
+                    flex-wrap: wrap
+                &-item
+                    &__img
+                        img 
+                            object-fit: cover
+                            width: 100%
+                            height: 100%
+                    &__title
+                        color: #1f272a
+                        text-transform: uppercase
+                    &__subtitle
+                        color: #1f272a
+                        text-transform: uppercase
+
+.page-object-catalog
+    .screen.screen-one.light
+        .screen-catalog-list.type_1 
+            .screen-catalog-list
+                &-block
+                &-item:nth-last-child(-n+3)
+                    margin-bottom: 0
+                &-item
+                    position: relative
+                    margin-bottom: 101px
+                    &__img
+                        height: 307px
+                        width: 100%
+                        margin-bottom: 24px
+                    &__title
+                        font-size: 17px
+                        font-weight: 700
+                        line-height: 24px
+                    &__subtitle
+                        font-size: 14px
+                        font-weight: 400
+                        line-height: 24px
+                        margin-top: 0
+                    &__date
+                        position: absolute
+                        content: ''
+                        top: 0
+                        left: -34px
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        &_icon
+                            margin-bottom: 5px
+                            svg
+                                width: 22px
+                                height: 16px
+                        &_text
+                            color: #455458
+                            font-size: 15px
+                            font-weight: 400
+                            line-height: 15px
+                            text-transform: uppercase
+                            writing-mode: tb-rl
+                            transform: rotate(180deg)

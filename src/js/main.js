@@ -85,6 +85,36 @@ document.addEventListener('DOMContentLoaded', () => {
 		// 	}
 		// ]
     });
+
+    // view-sldier
+    $('.screen-view-slider').slick({
+        // loop: true,
+        swipe: false,
+        dots: false,
+        centerMode: true,
+        infinite: true,
+		slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,        
+		prevArrow: '#view-slider-arrow_prev1',
+		nextArrow: '#view-slider-arrow_next1'
+		// responsive: [
+		// 	{
+		// 		breakpoint: 576,
+		// 		settings: {
+		// 			arrows: false
+		// 		}
+		// 	}
+		// ]
+    });
+
+
+
+
+
+
+
+
     
     // counter sliders
     let slidersArray = document.querySelectorAll('.js-slider');
