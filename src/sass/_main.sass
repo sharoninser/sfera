@@ -932,10 +932,11 @@
 
 
 /*                  OBJECT-CATALOG                     */
-.page-object-catalog
-    .screen.screen-one.light
+.page-catalog
+    .screen.screen-one
         padding-left: 9.9%    
-        padding-right: 9.9%    
+        padding-right: 9.9%  
+        min-height: auto  
         &::before
             display: none
     .screen
@@ -947,15 +948,16 @@
                 &-filter
                     display: flex
                     &-block
+                        margin-top: 9px
                         margin-bottom: 43px
                     &-item + .screen-catalog-list-filter-item
-                        margin-left: 35px
+                        margin-left: 36px
                     &-item
                         a
                             display: block
                             color: #1f272a
                             font-size: 16px
-                            line-height: 28px
+                            line-height: 34px
                             font-weight: 700
                             text-transform: uppercase
                             text-decoration: none
@@ -967,7 +969,39 @@
                     display: flex
                     justify-content: space-between
                     flex-wrap: wrap
+                    margin-bottom: 100px
                 &-item
+                    &:hover
+                        .screen-catalog-list-item-text__link
+                            top: 0
+                            transition: top .3s
+                &-item
+                    &-text 
+                        position: relative
+                        padding-top: 20px
+                        overflow: hidden
+                        &__link
+                            display: flex
+                            align-items: center
+                            position: absolute
+                            content: ''
+                            top: 100%
+                            left: 0
+                            width: 100%
+                            height: 100%
+                            background-color: #000000
+                            color: #65cbd7
+                            font-size: 15px
+                            line-height: 64px
+                            text-transform: uppercase
+                            text-decoration: none
+                            padding: 0 30px
+                            transition: top .3s
+                            svg 
+                                width: 7px
+                                height: 6px
+                                fill: #f2f5f5
+                                margin-left: 17px
                     &__img
                         img 
                             object-fit: cover
@@ -976,24 +1010,46 @@
                     &__title
                         color: #1f272a
                         text-transform: uppercase
+                        padding-right: 35px
                     &__subtitle
                         color: #1f272a
                         text-transform: uppercase
+                &-pagination
+                    text-decoration: none
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    color: #000000
+                    font-size: 15px
+                    font-weight: 700
+                    line-height: 20px
+                    text-transform: uppercase
+                    background-color: #f2f5f5
+                    width: 100%
+                    height: 48px
+                    margin-bottom: 121px
+                    svg
+                        width: 12px
+                        height: 12px
+                        margin-right: 11px
 
-.page-object-catalog
+.page-catalog
     .screen.screen-one.light
         .screen-catalog-list.type_1 
             .screen-catalog-list
                 &-block
+                    &::after
+                        width: calc(33.333% - 43px)
+                        content: ''
                 &-item:nth-last-child(-n+3)
                     margin-bottom: 0
                 &-item
                     position: relative
-                    margin-bottom: 101px
+                    margin-bottom: 97px
+                    width: calc(33.333% - 43px)
                     &__img
                         height: 307px
                         width: 100%
-                        margin-bottom: 24px
                     &__title
                         font-size: 17px
                         font-weight: 700
@@ -1024,3 +1080,207 @@
                             text-transform: uppercase
                             writing-mode: tb-rl
                             transform: rotate(180deg)
+
+.page-catalog
+    .screen.screen-one.light
+        .screen-catalog-list.type_2 
+            .screen-catalog-list
+                &-block
+                    margin-bottom: 89px
+                    &::after
+                        width: calc(25% - 48px)
+                        content: ''
+                    &::before
+                        width: calc(25% - 48px)
+                        content: ''
+                        order: 999
+                &-item:nth-last-child(-n+4)
+                    margin-bottom: 0
+                &-item
+                    position: relative
+                    margin-bottom: 60px
+                    width: calc(25% - 48px)
+                    &__img
+                        height: 220px
+                        width: 100%
+                    &__title
+                        font-size: 14px
+                        font-weight: 700
+                        line-height: 20px
+                        padding-right: 0
+                    &-text 
+                        &__link
+                            line-height: 60px
+
+
+
+/*                   OBJECT-DETAIL                      */
+.page-object-detail
+    .screen.screen-one
+        padding-left: 9.9%
+        min-height: auto
+        &::before
+            display: none
+        .screen
+            &-top
+                padding-left: 0
+                padding-right: 0
+            &-object
+                &-desc
+                    display: flex
+                    justify-content: space-between
+                    &-left
+                        padding-top: 33px
+                        width: calc(33.5% - 45px)
+                        margin-bottom: 190px
+                        p:not(.screen-object-desc-location)
+                            color: #1f272a
+                            font-size: 18px
+                            font-weight: 400
+                            line-height: 32px
+                            margin-top: 0
+                            margin-bottom: 53px
+                    &-location
+                        display: flex
+                        align-items: flex-end
+                        margin-bottom: 23px
+                        svg
+                            width: 16px
+                            height: 20px
+                            margin-right: 7px
+                        span
+                            color: #2e2e2f
+                            font-size: 17px
+                            font-weight: 700
+                            line-height: 20px
+                    &-block
+                        width: 100%
+                        background-color: #000000
+                        padding-left: 34px
+                        padding-right: 23px
+                    &-numbers
+                        display: flex
+                        border-bottom: 1px solid #242c2e
+                        padding-top: 30px
+                        padding-bottom: 21px    
+                        &-item:first-child
+                            margin-right: 11.4%
+                        &-item
+                            display: flex
+                            align-items: cetner
+                            &__icon.date-icon-light_type2
+                                svg
+                                    width: 33px
+                                    height: 24px
+                            &__icon.icon-roulette
+                                svg
+                                    width: 31px
+                                    height: 26px
+                            &__icon
+                                svg
+                                    margin-right: 5px
+                            &__text
+                                color: #ffffff
+                                font-size: 24px
+                                letter-spacing: normal
+                                line-height: 24px
+                                text-transform: uppercase
+                                span
+                                    font-weight: 700
+                    &-links
+                        padding-top: 22px 
+                        padding-bottom: 27px
+                    &-link
+                        display: flex
+                        align-items: center
+                        color: #63cdd7
+                        font-size: 15px
+                        line-height: 20px
+                        text-transform: uppercase
+                        text-decoration: none
+                        width: fit-content
+                        svg
+                            width: 7px
+                            height: 6px
+                            margin-left: 14px
+                            fill: #ffffff
+                    
+                    &-right
+                        padding-top: 14px
+                        width: calc(66.5% - 45px)
+                    &-slider
+                        &-nav
+                            padding-top: 19px
+                            padding-left: 10px
+                        &-wrap
+                        &-item
+                            width: 100%
+                            max-width: 903px
+                            margin-right: 32px
+                            &__img
+                                height: 540px
+                                img
+                                    object-fit: cover
+                                    width: 100%
+                                    height: 100% 
+                    
+            
+/*                   CONTACTS                      */
+.page-contacts
+    .screen.screen-one
+        padding-left: 9.9%
+        padding-left: 18%
+        padding-right: 9.9%
+        min-height: auto
+        &::before
+            display: none
+        .screen
+            &-top
+                padding-left: 0
+                padding-right: 0
+            &-contacts
+                &-block
+                    padding-top: 40px
+                &-item + .screen-contacts-item
+                    margin-top: 27px
+                &-item
+                    &__title
+                        color: #293032
+                        font-size: 24px
+                        font-weight: 700
+                        line-height: 52px
+                        text-align: left
+                        text-transform: uppercase
+                        margin-bottom: 17px
+                    &-link + .screen-contacts-item-link 
+                        margin-top: 10px
+                    &-link.location
+                        svg
+                            height: 21px
+                    &-link.mobile
+                        svg
+                            height: 18px
+                    &-link.mail
+                        svg
+                            height: 14px
+                    &-link.profile
+                        svg
+                            height: 17px
+                    &-link
+                        display: flex
+                        align-items: flex-start
+                        svg
+                            width: 20px
+                            margin-right: 10px   
+                        &-block
+                            display: flex
+                            flex-direction: column
+                            a + a
+                                margin-top: 8px
+                            p, a
+                                color: #293032
+                                font-size: 16px
+                                font-weight: 300
+                                line-height: 24px
+                                text-decoration: none
+                        &__icon

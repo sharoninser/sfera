@@ -107,6 +107,25 @@ document.addEventListener('DOMContentLoaded', () => {
 		// 	}
 		// ]
     });
+    // view-sldier
+    $('.screen-object-desc-slider').slick({
+        loop: true,
+        dots: false,
+        infinite: false,
+		slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,        
+		prevArrow: '#screen-slider-object-detail-arrow__prev',
+		nextArrow: '#screen-slider-object-detail-arrow__next'
+		// responsive: [
+		// 	{
+		// 		breakpoint: 576,
+		// 		settings: {
+		// 			arrows: false
+		// 		}
+		// 	}
+		// ]
+    });
 
 
 
