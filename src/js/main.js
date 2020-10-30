@@ -139,6 +139,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let slidersArray = document.querySelectorAll('.js-slider');
     counterSlide(slidersArray);  
 
+
+
+    $(".calculate-box-item-upload__default").change(function() {
+
+        var f_name = [];
+
+        for (var i = 0; i < $(this).get(0).files.length; ++i) {
+
+            f_name.push(" " + $(this).get(0).files[i].name);
+
+        }
+
+        $("#f_name").val(f_name.join(", "));
+    });
+
+
+
 });
 
 

@@ -97,7 +97,32 @@
                         </div>
                     </div>
                 </div>
-                <div class="screen-contacts-form"></div>
+                <div class="screen-contacts-form-block">
+                    <p class="screen-contacts-form__title">Обратная связь</p>
+                    <form class="screen-contacts-form" action="#">
+                        <div class="screen-contacts-form-items">
+                            <div class="screen-contacts-form-item name">
+                                <label for="screen-contacts-form__name">Контактное лицо<span><sup>*</sup></span></label>
+                                <input class="screen-contacts-form__name" type="text" name="" id="screen-contacts-form__name" placeholder="ФИО" required>
+                            </div>
+                            <div class="screen-contacts-form-item mail">
+                                <label for="screen-contacts-form__mail">Контактный e-mail<span><sup>*</sup></span></label>
+                                <input class="screen-contacts-form__mail" type="email" name="" id="screen-contacts-form__mail" placeholder="E-mail" required>
+                            </div>
+                            <div class="screen-contacts-form-item comment">
+                                <label for="screen-contacts-form__comment">Комментарий</label>
+                                <textarea class="screen-contacts-form__comment" name="" id="screen-contacts-form__comment" placeholder="Ваш комментарий"></textarea>
+                            </div>
+                        </div>
+                        <div class="screen-contacts-form-check-wrap">
+                            <input type="checkbox" name="" id="screen-contacts-form-check__input">
+                            <label class="screen-contacts-form-check__label" for="screen-contacts-form-check__input">
+                                <span>Нажимая кнопку «Отправить», вы соглашаетесь с условиями <a href="#">Пользовательского соглашения</a></span>
+                            </label>
+                        </div>
+                        <input class="screen-contacts-form-btn" type="submit" value="Отправить заявку">
+                    </form>
+                </div>
             </div>
         </section>
 
