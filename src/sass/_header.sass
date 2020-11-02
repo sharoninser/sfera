@@ -1,0 +1,125 @@
+// header
+.header
+    display: flex
+    justify-content: space-between
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 70px
+    background-color: #000000
+    z-index: 999
+    padding-left: 40px
+    padding-right: 30px
+    &-logo
+        align-self: flex-end
+        width: 100%
+        max-width: 195px
+    &-nav
+        align-self: center
+        &-wrap
+            display: flex
+            align-items: center
+        &-list
+            display: flex
+            align-items: center
+            &-item.has-child 
+                position: relative
+                & > a
+                    line-height: 70px
+            &-item
+                & > a
+                    color: #f2f5f5
+                    font-size: 16px
+                    font-weight: 700
+                    line-height: 24px
+                    text-transform: uppercase
+                    text-decoration: none
+                    padding: 0 30px
+        &-dropdown
+            &-menu
+                position: absolute
+                content: ''
+                top: 100%
+                left: 0
+                right: 0
+                min-width: 780px
+                padding-left: 30px
+                display: none
+                flex-wrap: wrap
+                background: #fff
+                padding: 17px 0
+                &::before
+                    content: ""
+                    background: #fff
+                    position: absolute
+                    /* left: 0; */
+                    right: -100%
+                    width: 100000px
+                    top: 0
+                    bottom: 0
+                    z-index: -1
+                &::after
+                    content: ""
+                    width: 1px
+                    top: 19px
+                    bottom: 19px
+                    position: absolute
+                    background-color: rgba(219, 228, 227, 0.82)
+                    left: 20px
+                li
+                    width: 40%
+                    padding: 6px 0
+                    padding-left: 10px
+                    a
+                        display: block
+                        width: 100%
+                        height: 100%
+                        font-size: 13px
+                        color: #2e2e2f
+                        padding: 0 30px
+                        font-weight: bold
+                        text-transform: uppercase
+                        transition: 0.3s linear
+                        text-decoration: none
+
+    &-mobile
+        position: relative
+        padding: 0 23px
+        &::after, &::before
+            position: absolute
+            content: ''
+            top: 50%
+            width: 1px
+            height: 24px
+            background-color: #455458
+            transform: translateY(-50%)
+        &::before
+            left: 0  
+        &::after
+            right: 0  
+        &__link
+            color: #ffffff
+            font-size: 20px
+            font-weight: 600
+            line-height: 36px
+            text-transform: uppercase
+            text-decoration: none
+            span
+                color: #63cdd7
+                font-weight: 300
+    &-search
+        margin-left: 30px
+        &__link
+            svg
+                width: 24px
+                height: 24px
+    
+    
+    
+    
+    
+    
+    
+    
+    
