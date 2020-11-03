@@ -43,7 +43,7 @@ gulp.task('ftp', function(){
 		host: 'website.com', 					// хостинг			
 		user: 'jonny', 								// логин
 		pass: '1234', 								// пароль
-		remotePath: 'www/serg.ru/progect' 		// путь папки сохранения 
+		remotePath: 'www/serg.ru/project' 		// путь папки сохранения 
 	}))
 });
 

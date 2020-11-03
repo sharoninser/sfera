@@ -354,13 +354,12 @@ p + p {
   bottom: 19px;
   position: absolute;
   background-color: rgba(219, 228, 227, 0.82);
-  left: 20px;
+  left: 11px;
 }
 
 .header-nav-dropdown-menu li {
   width: 40%;
   padding: 6px 0;
-  padding-left: 10px;
 }
 
 .header-nav-dropdown-menu li a {
@@ -423,6 +422,206 @@ p + p {
 .header-search__link svg {
   width: 24px;
   height: 24px;
+}
+
+.nav-menu.active {
+  right: 0;
+}
+
+.nav-menu.active ul li a {
+  opacity: 1;
+}
+
+.nav-menu.light.active ul li {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.nav-menu.light.active ul li a svg {
+  fill: #ffffff;
+}
+
+.nav-menu.light.active ul li::before,
+.nav-menu.light ul li::before {
+  background-color: #f2f5f5;
+}
+
+.nav-menu.light.active ul li a,
+.nav-menu.light ul li a {
+  color: #fff;
+}
+
+.nav-menu.dark.active ul li::before,
+.nav-menu.dark ul li::before {
+  background-color: #202c2e;
+}
+
+.nav-menu.dark.active ul li a,
+.nav-menu.dark ul li a {
+  color: #202c2e;
+}
+
+.nav-menu.light:hover ul li {
+  background-color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-menu.light:hover ul li a svg {
+  fill: #ffffff;
+}
+
+.nav-menu.dark:hover ul li {
+  background-color: #dcdfdf;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-menu.dark:hover ul li a svg {
+  fill: #202c2e;
+}
+
+.nav-menu:hover {
+  right: 0;
+}
+
+.nav-menu:hover ul li a {
+  opacity: 1;
+}
+
+.nav-menu.light ul li.active::before,
+.nav-menu.dark ul li.active::before {
+  background-color: #00d1d9;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-menu.light ul li.active a,
+.nav-menu.dark ul li.active a {
+  color: #00d1d9;
+}
+
+.nav-menu.light ul li.active a svg,
+.nav-menu.dark ul li.active a svg {
+  fill: #00d1d9;
+}
+
+.nav-menu.light ul li:hover::before,
+.nav-menu.dark ul li:hover::before {
+  background-color: #00d1d9;
+}
+
+.nav-menu.light ul li:hover a,
+.nav-menu.dark ul li:hover a {
+  color: #00d1d9;
+}
+
+.nav-menu.light ul li:hover a svg,
+.nav-menu.dark ul li:hover a svg {
+  fill: #00d1d9;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-menu.dark ul li.active::before {
+  background-color: #0097ba;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-menu.dark ul li.active a {
+  color: #0097ba;
+}
+
+.nav-menu.dark ul li.active a svg {
+  fill: #0097ba;
+}
+
+.nav-menu.dark ul li:hover::before {
+  background-color: #0097ba;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-menu.dark ul li:hover a {
+  color: #0097ba;
+}
+
+.nav-menu.dark ul li:hover a svg {
+  fill: #0097ba;
+}
+
+.nav-menu.hidden {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-menu {
+  position: fixed;
+  z-index: 1;
+  bottom: 130px;
+  width: 350px;
+  right: -250px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-menu__scroll-up svg {
+  width: 14px;
+  height: 18px;
+  fill: #ffffff;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-menu ul {
+  padding-left: 40px;
+}
+
+.nav-menu ul li + li {
+  margin-top: 20px;
+}
+
+.nav-menu ul li {
+  position: relative;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-menu ul li::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.nav-menu ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 20px;
+  font-size: 12px;
+  line-height: 14px;
+  height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+.nav-menu ul li a span {
+  margin-right: 5px;
 }
 
 .screen.screen-one.light {

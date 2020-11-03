@@ -66,11 +66,10 @@
                     bottom: 19px
                     position: absolute
                     background-color: rgba(219, 228, 227, 0.82)
-                    left: 20px
+                    left: 11px
                 li
                     width: 40%
                     padding: 6px 0
-                    padding-left: 10px
                     a
                         display: block
                         width: 100%
@@ -118,8 +117,150 @@
     
     
     
+// nav-menu
+
+// nav-menu-colors
+.nav-menu.active
+    right: 0
+    ul
+        li
+            a
+                opacity: 1
+.nav-menu.light.active
+    ul 
+        li 
+            background: rgba(0, 0, 0, 0.9)
+            a
+                svg
+                    fill: #ffffff
+.nav-menu.light.active, .nav-menu.light
+    ul
+        li
+            &::before
+                background-color: #f2f5f5
+            a
+                color: #fff
+.nav-menu.dark.active, .nav-menu.dark
+    ul
+        li
+            &::before
+                background-color: #202c2e
+            a
+                color: #202c2e
+    
+.nav-menu.light:hover
+    ul 
+        li
+            background-color: rgba(0, 0, 0, 0.9)
+            transition: 0.3s ease
+            a
+                svg
+                    fill: #ffffff
+.nav-menu.dark:hover
+    ul 
+        li
+            background-color: #dcdfdf
+            transition: 0.3s ease
+            a
+                svg
+                    fill: #202c2e
+.nav-menu:hover
+    right: 0
+    ul 
+        li
+            a 
+                opacity: 1
+
+.nav-menu.light, .nav-menu.dark
+    ul
+        li.active 
+            &::before
+               background-color: #00d1d9
+               transition: 0.3s ease
+            a
+                color: #00d1d9
+                svg 
+                    fill:  #00d1d9
+        li:hover
+            &::before
+                background-color: #00d1d9
+            a 
+                color: #00d1d9
+                svg
+                    fill: #00d1d9
+                    transition: 0.3s ease
+.nav-menu.dark
+    ul 
+        li.active
+            &::before
+               background-color: #0097ba
+               transition: 0.3s ease
+            a
+                color:#0097ba
+                svg 
+                    fill:  #0097ba
+        li:hover
+            &::before
+               background-color: #0097ba
+               transition: 0.3s ease
+            a
+                color:#0097ba
+                svg 
+                    fill:  #0097ba
+        
+
+
+.nav-menu.hidden
+    opacity: 0
+    visibility: hidden
+    transition: 0.3s ease
+
+.nav-menu
+    position: fixed
+    z-index: 1
+    bottom: 130px
+    width: 350px
+    right: -250px
+    transition: 0.3s linear
+    opacity: 1
+    visibility: visible
+    &__scroll-up
+        svg
+            width: 14px
+            height: 18px
+            fill: #ffffff
+            transition: 0.3s ease
+    ul
+        padding-left: 40px
+        li + li
+            margin-top: 20px
+
+        li
+            position: relative
+            transition: 0.3s ease
+            &::before
+                position: absolute
+                content: ''
+                top: 0
+                left: 0
+                width: 3px  
+                height: 100%
+                transition: 0.3s ease
+            a
+                display: flex
+                align-items: center
+                padding-left: 20px
+                font-size: 12px
+                line-height: 14px                
+                height: 40px
+                text-transform: uppercase
+                text-decoration: none
+                transition: 0.3s ease
+                opacity: 0
+                span 
+                    margin-right: 5px
+
     
     
-    
-    
+
     

@@ -10,7 +10,44 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   
+    
+    <header class="header">
+        <a href="#" class="header-logo">
+            <img src="img/logo.png" alt="Логотип">
+        </a>
+        <div class="header-nav-wrap">
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+                    <li class="header-nav-list-item"><a href="#">О компании</a></li>
+                    <li class="header-nav-list-item has-child">
+                        <a href="#">Виды зданий</a>
+                        <ul class="header-nav-dropdown-menu">
+                            <li><a href="#">Фундаменты</a></li>
+                            <li><a href="#">Несущий каркас</a></li>
+                            <li><a href="#">Ограждающие конструкции</a></li>
+                            <li><a href="#">Полы здания</a></li>
+                            <li><a href="#">Автосалоны и автосервисы</a></li>
+                            <li><a href="#">Сельскохозяйственные здания</a></li>
+                            <li><a href="#">Спортивные сооружения</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-nav-list-item"><a href="#">Объекты</a></li>
+                    <li class="header-nav-list-item"><a href="#">Новости</a></li>
+                    <li class="header-nav-list-item"><a href="#">Статьи</a></li>
+                </ul>
+            </nav>
+            <div class="header-mobile">
+                <a href="tel:79051218128" class="header-mobile__link"><span>+7 (905)</span> 121-81-28</a>
+            </div>
+            <div class="header-search">
+                <a class="header-search__link" href="#">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#header-search-icon"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
     <main class="page-catalog page-article-catalog">
         <section class="screen screen-one light">
             <div class="screen-top">
@@ -203,6 +240,130 @@
         </section>
 
     </main>
+    <footer id="footer" class="footer">
+        <div class="footer-top" style="background-image: url('img/footer-bg.jpg');">
+            <div class="footer-top-left">
+                <a href="#" class="footer-top-left-logo">
+                    <img src="img/footer-logo.png" alt="Логотип">
+                </a>
+            </div>
+            <div class="footer-top-main">
+                <div class="footer-top-main-block">
+                    <div class="footer-top-main-item">
+                        <p class="footer-top-main-item__title">О компании</p>
+                        <ul class="footer-top-main-item-list">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Сертификаты и дипломы</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li><a href="#">Партнеры</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Реквизиты</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-top-main-item">
+                        <p class="footer-top-main-item__title">Быстровозводимые здания</p>
+                        <ul class="footer-top-main-item-list">
+                            <li><a href="#">Производственные помещения</a></li>
+                            <li><a href="#">Склады</a></li>
+                            <li><a href="#">Офисы</a></li>
+                            <li><a href="#">Торговые центры</a></li>
+                            <li><a href="#">Спортивные объекты</a></li>
+                            <li><a href="#">Заполнить ТЗ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-top-main-item">
+                        <p class="footer-top-main-item__title">Построенные объекты </p>
+                        <ul class="footer-top-main-item-list">
+                            <li><a href="#">Производственные помещения</a></li>
+                            <li><a href="#">Склады</a></li>
+                            <li><a href="#">Офисы</a></li>
+                            <li><a href="#">Торговые центры</a></li>
+                            <li><a href="#">Спортивные объекты</a></li>
+                            <li><a href="#">Все объекты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-top-main-item">
+                        <p class="footer-top-main-item__title">Услуги</p>
+                        <ul class="footer-top-main-item-list">
+                            <li><a href="#">Строительство зданий под ключ</a></li>
+                            <li><a href="#">Реконстурукция зданий</a></li>
+                            <li><a href="#">Капитальный ремонт</a></li>
+                        </ul>
+
+                        <address class="footer-top-main-address">
+                            <div class="footer-top-main-address-item location">
+                                <div class="footer-top-main-address-item__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-contacts-location"></use>
+                                    </svg>
+                                </div>
+                                <p>392000 г.Тамбов, ул. Монтажников,  д. 1, оф. 6</p>
+                            </div>
+                            <div class="footer-top-main-address-item mobile">
+                                <div class="footer-top-main-address-item__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-contacts-mobile"></use>
+                                    </svg>
+                                </div>
+                                <a href="tel:79051218128">+7 (905) 121-81-28</a>
+                            </div>
+                            <div class="footer-top-main-address-item mail">
+                                <div class="footer-top-main-address-item__icon">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-contacts-mail"></use>
+                                    </svg>
+                                </div>
+                                <a href="mailto:info@sferask.ru">info@sferask.ru</a>
+                            </div>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-left">
+                <div class="footer-bottom-left-copy">
+                    <p>© 2018 Строительная компания «Сфера».</p>
+                </div>
+                <div class="footer-bottom-left-links">
+                    <a href="#">Карта сайта</a>
+                    <a href="#">Политика работы с персональными данными</a>
+                </div>
+            </div>
+            <div class="footer-bottom-right">
+                <div class="footer-bottom-right-social-links">
+                    <a href="#" class="footer-bottom-right-social__facebook">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-bottom-right-social__vk">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-vk"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-bottom-right-social__instagram">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer-bottom-right-social__youtube">
+                        <svg>
+                            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer-bottom-right-developer">
+                    <p>Разработка сайта</p>
+                    <a href="https://www.vedita.ru/" target="_blank">
+                        <img src="img/vedita.png" alt="Ведита">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/slick.min.js"></script>

@@ -140,45 +140,94 @@ document.addEventListener('DOMContentLoaded', () => {
     counterSlide(slidersArray);  
 
 
-
+    // изменение кастомного добавления файлов
     $(".calculate-box-item-upload__default").change(function() {
-
         var f_name = [];
-
         for (var i = 0; i < $(this).get(0).files.length; ++i) {
-
             f_name.push(" " + $(this).get(0).files[i].name);
-
         }
-
         $("#f_name").val(f_name.join(", "));
     });
 
 
 
-});
+    // якорные ссылки
+    $("#section-scroll").on("click", "a", function (event) {
 
+        event.preventDefault();
 
-function counterSlide(slidersArrayFunc) {
-    for(let i = 0; i < slidersArrayFunc.length; i++) {
-        if(slidersArrayFunc[i] !== null) {
-            let sliderItemsArray = slidersArrayFunc[i].querySelectorAll('.js-slider-item');
-            let sliderItemsLength = sliderItemsArray.length;
-            let sliderNav = slidersArrayFunc[i].parentElement.querySelector('.screen-slider-nav');
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
 
-            if(sliderNav !== null) {
-                let outputSliderItemsCurrent = sliderNav.querySelector('.screen-slider-nav__counter-current');
-                let outputSliderItemsAll = sliderNav.querySelector('.screen-slider-nav__counter-all');
+        $('body,html').animate({ scrollTop: top }, 500);
+    });
 
-                let j = 1;
-                outputSliderItemsCurrent.innerHTML = j;
-                outputSliderItemsAll.innerHTML = sliderItemsLength;
-
-                $(slidersArrayFunc[i]).on('init reInit afterChange', function(event, slider, currentSlide, nextSlide) {
-                    countElem = (currentSlide ? currentSlide : 0) + 1;
-                    outputSliderItemsCurrent.innerHTML = countElem;
-                });
-            }
+     $(window).scroll(function () {
+        if ($(window).scrollTop() > 100) {
+            $('#section-scroll').removeClass('active');
+        } else {
+            $('#section-scroll').addClass('active');
         }
-    }
-}
+    });
+
+
+    // фиксированное навигационное меню
+    var sections = $('section'),
+        nav = $('.nav-menu'),
+        nav_height = nav.outerHeight(),
+        footer = $('#footer');
+
+    $(window).on('scroll', function () {
+        var cur_pos = $(this).scrollTop();
+    
+        if(sections !== null) {
+            sections.each(function(index, section) {
+                var top = $(this).offset().top - nav_height - $(this).outerHeight() / 2,
+                    bottom = top + $(this).outerHeight();
+                var thisElement = $(this);
+                
+                
+                if (cur_pos >= top && cur_pos <= bottom) {
+                    // удаление классов после завершения итерации
+                    nav.find('a').parent().removeClass('active');
+                    sections.removeClass('active');                    
+
+                    // добавление классов во время итерации
+                    $(this).addClass('active');
+                    nav.find('a[href="#'+$(this).attr('id')+'"]').parent().addClass('active');
+
+                    // проверка секций на пустой id (несколько секций подряд)
+                    if($(section).attr('id') == undefined) {
+                        var prevSiblingAll = $(section).prevAll();
+                        var array = [];
+                        // записывыем в новый массив элементы, у которых есть id
+                        prevSiblingAll.each(function(index, prevSibling) {
+                            if($(prevSibling).attr('id') !== undefined) {
+                                array.push(prevSibling);                                
+                            }
+                        });
+                        // берем первый элемент массива (ближайший по DOM)
+                        var prevScreenId = array[0].id;
+                        nav.find('a[href="#'+prevScreenId+'"]').parent().addClass('active');
+
+                        navColorsChange(thisElement, nav); // ф-ция смены цветов навигационного меню                       
+                    } else {
+                        navColorsChange(thisElement, nav); // ф-ция смены цветов навигационного меню
+                    }
+                }
+            });
+        }
+
+
+        var scroll = $(window).scrollTop() + $(window).height(); //координаты окна относительно его высоты
+        var offset = footer.offset().top; //координаты футера
+    
+        if(scroll > offset) {
+            $(nav).addClass('hidden');
+        } else {
+            $(nav).removeClass('hidden');
+        }
+    });
+
+
+});
