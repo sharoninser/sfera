@@ -152,21 +152,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // якорные ссылки
-    $("#section-scroll").on("click", "a", function (event) {
 
-        event.preventDefault();
+    let parentBlockLinksNav = $("#section-scroll");
+    let parentBlockLinksBtnUp = $("#btn-scroll-up");
 
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
+    anchorLinks(parentBlockLinksNav);
+    anchorLinks(parentBlockLinksBtnUp);
 
-        $('body,html').animate({ scrollTop: top }, 500);
-    });
 
      $(window).scroll(function () {
         if ($(window).scrollTop() > 100) {
-            $('#section-scroll').removeClass('active');
+            $(parentBlockLinksNav).removeClass('active');
         } else {
-            $('#section-scroll').addClass('active');
+            $(parentBlockLinksNav).addClass('active');
         }
     });
 
@@ -174,8 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // фиксированное навигационное меню
     var sections = $('section'),
         nav = $('.nav-menu'),
-        nav_height = nav.outerHeight(),
-        footer = $('#footer');
+        nav_height = nav.outerHeight();
 
     $(window).on('scroll', function () {
         var cur_pos = $(this).scrollTop();
@@ -218,15 +215,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
+       
 
-        var scroll = $(window).scrollTop() + $(window).height(); //координаты окна относительно его высоты
-        var offset = footer.offset().top; //координаты футера
-    
-        if(scroll > offset) {
-            $(nav).addClass('hidden');
-        } else {
-            $(nav).removeClass('hidden');
-        }
+
+        hideFixedBlockNav(nav);
+        hideFixedBlockUp(parentBlockLinksBtnUp);
+
     });
 
 

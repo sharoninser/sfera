@@ -1,3 +1,15 @@
+function anchorLinks(parentBlockLinksFunc) {
+    $(parentBlockLinksFunc).on("click", "a", function (event) {
+
+        event.preventDefault();
+
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+
+        $('body,html').animate({ scrollTop: top }, 500);
+    });
+}
+
 function navColorsChange(thisElementFunc, navFunc) {
     if($(thisElementFunc).hasClass('light') && !$(thisElementFunc).hasClass('screen-one')) {
         navFunc.removeClass('light');
@@ -7,7 +19,6 @@ function navColorsChange(thisElementFunc, navFunc) {
         navFunc.addClass('light');
     }
 }
-
 
 function counterSlide(slidersArrayFunc) {
     for(let i = 0; i < slidersArrayFunc.length; i++) {
@@ -32,3 +43,28 @@ function counterSlide(slidersArrayFunc) {
         }
     }
 }
+
+function hideFixedBlockNav(fixedBlock) {
+    var scroll = $(window).scrollTop() + $(window).height(); //координаты окна относительно его высоты
+    var footer = $('#footer');
+    var offset = footer.offset().top + 130; //координаты футера
+    
+
+    if(scroll > offset) {
+        $(fixedBlock).addClass('hidden');
+    } else {
+        $(fixedBlock).removeClass('hidden');
+    }
+}
+
+
+function hideFixedBlockUp(fixedBlockUp) {
+    if($(window).scrollTop() > 550) {
+        $(fixedBlockUp).removeClass('hidden');
+        hideFixedBlockNav(fixedBlockUp);
+    } else {
+        $(fixedBlockUp).addClass('hidden');
+    }
+}
+
+
