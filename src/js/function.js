@@ -2,9 +2,8 @@ function anchorLinks(parentBlockLinksFunc) {
     $(parentBlockLinksFunc).on("click", "a", function (event) {
 
         event.preventDefault();
-
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
+        var id = $(this).attr('href');
+        var top = $(id).offset().top;
 
         $('body,html').animate({ scrollTop: top }, 500);
     });
@@ -47,13 +46,15 @@ function counterSlide(slidersArrayFunc) {
 function hideFixedBlockNav(fixedBlock) {
     var scroll = $(window).scrollTop() + $(window).height(); //координаты окна относительно его высоты
     var footer = $('#footer');
-    var offset = footer.offset().top + 130; //координаты футера
-    
 
-    if(scroll > offset) {
-        $(fixedBlock).addClass('hidden');
-    } else {
-        $(fixedBlock).removeClass('hidden');
+    if(footer !== null) {
+        var offset = footer.offset().top + 130; //координаты футера
+
+        if(scroll > offset) {
+            $(fixedBlock).addClass('hidden');
+        } else {
+            $(fixedBlock).removeClass('hidden');
+        }
     }
 }
 

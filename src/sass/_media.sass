@@ -1,27 +1,282 @@
 @media (min-width: 1025px)
     .header-nav-list-item.has-child:hover .header-nav-dropdown-menu
         display: flex
-@media screen and (max-width: 1400px)
+
+    // nav-menu
+    .nav-menu.light:hover
+        ul 
+            li
+                background-color: rgba(0, 0, 0, 0.9)
+                transition: 0.3s ease
+                a
+                    svg
+                        fill: #ffffff
+    .nav-menu.dark:hover
+        ul 
+            li
+                background-color: #dcdfdf
+                transition: 0.3s ease
+                a
+                    svg
+                        fill: #202c2e
+    .nav-menu:hover
+        right: 0
+        ul 
+            li
+                a 
+                    opacity: 1
+
+
+    .nav-menu.light, .nav-menu.dark
+        ul
+            li:hover
+                &::before
+                    background-color: #00d1d9
+                a 
+                    color: #00d1d9
+                    svg
+                        fill: #00d1d9
+                        transition: 0.3s ease
+
+
+    .nav-menu.dark
+        ul 
+            li:hover
+                &::before
+                    background-color: #0097ba
+                    transition: 0.3s ease
+                a
+                    color:#0097ba
+                    svg 
+                        fill:  #0097ba
+@media screen and (max-width: 1560px)
+    // nav-menu
+    .nav-menu
+        width: 290px
+        right: -190px
+
+@media screen and (max-width: 1440px)
     .screen
         &-left
             &-step
+                &-block
+                    min-height: 450px
                 &__count
                     font-size: 48px
+                    line-height: 31.78px
+                    &::after
+                        left: 25px  
                 &__title
-                    font-size: 56px
+                    font-size: 27px
+                    line-height: 29px
+        // &-team
+        //     &-slider
+        //         &-item
+        //             max-width: 570px
 
 @media screen and (max-width: 1280px)
+    h1
+        font-size: 44px
+        line-height: 54px
+    h2 
+        font-size: 28px
+        line-height: 36px
+    
+    p 
+        font-size: 20px
+        line-height: 38px
+
+    p + p
+        margin-top: 30px
+    .breadcrumb
+        margin-bottom: 20px
+        ul 
+            li 
+                a, span 
+                    font-size: 12px
     .screen
-        &-left
-            &-step
+        &-left 
+            &-step 
                 &__count
-                    font-size: 36px
+                    font-size: 40px
                 &__title
-                    font-size: 49px
+                    font-size: 24px
+                    line-height: 26px
+        &-one 
+            padding-top: 60px
+        &-top 
+            padding-top: 67px
+            padding-left: 22px
+            padding-right: 22px
+        &-main 
+            p.screen-main__text
+                max-width: 80%
+                margin-top: 30px
+            &-links
+                padding: 22px 44px
+    
+
+    // advantages
+    .screen
+        &-advantages
+            &-item
+                width: 33.3333%
+                &__title
+                    font-size: 14px
+                    line-height: 22px
+        .screen-block
+            &-receive
+                .screen-advantages
+                    padding-bottom: 10px
+                .screen-advantages-text
+                    padding-top: 30px
+                    
 
 @media screen and (max-width: 1024px)
+    h1 
+        margin-bottom: 55px
     .screen
-        &-left
-            &-step
+        &-one 
+            padding-top: 50px
+    .nav-menu
+        width: 100px
+        ul 
+            padding-left: 30px
+            li 
+                a
+                    padding-left: 15px
+                    span.nav-menu__text
+                        display: none
+                    span:not(.nav-menu__text)
+                        width: 14px
+                        text-align: center                  
+
+    .nav-menu.dark
+        ul 
+            li
+                background-color: #dcdfdf
+                transition: 0.3s ease
+                a
+                    svg
+                        fill: #202c2e
+
+    // advantages
+    .screen
+        &-advantages
+            &-item
+                width: 50%
                 &__title
-                    font-size: 42px
+                    max-width: 200px
+
+@media screen and (max-width: 768px) 
+    .screen.screen-one
+        min-height: 100vh
+        &::before
+            display: none
+        .screen-main-block
+            padding-right: 0
+            margin-bottom: 13.5%
+    .screen
+        min-height: auto
+        padding-left: 0
+        padding-right: 0
+        &-top 
+            padding-left: 30px
+            padding-right: 30px
+        &-left 
+            &-step 
+                display: none
+        &-one 
+            padding-top: 50px
+        &-main 
+            p.screen-main__text
+                margin-bottom: 15%
+    .nav-menu
+        display: none
+
+
+    // advantages
+    .screen
+        &-advantages
+            &-item
+                // margin: 10px 0
+                // width: 100%
+
+@media screen and (max-width: 575px)
+    h1
+        font-size: 24px
+        line-height: 29px
+        margin-bottom: 20px
+    h2 
+        font-size: 20px
+        line-height: 24px
+        margin-bottom: 15px
+    p 
+        font-size: 16px
+        line-height: 26px
+
+    p + p
+        margin-top: 15px
+    .container
+        padding-left: 15px
+        padding-right: 15px
+
+    .breadcrumb 
+        display: none
+
+    .screen.screen-one
+        min-height: auto
+        .screen-main-block 
+            margin-bottom: 0
+            
+    .screen
+        &-top 
+            padding-top: 32px
+            padding-left: 15px
+            padding-right: 15px
+        &-main
+            &-wrap
+                padding: 55px 0 49px
+            p.screen-main__text
+                font-size: 16px
+                line-height: 26px
+                margin-top: 0
+                margin-bottom: 0
+                max-width: 100%
+                margin-bottom: 40px
+            &-links
+                flex-wrap: wrap
+                flex-direction: column
+                width: 100%
+                padding: 0
+                background-color: transparent
+                &-block                    
+                    padding: 22px 0
+                    width: 100%
+                    display: flex
+                    justify-content: center
+                    background-color: #000
+                    max-width: 340px
+                &-block + .screen-main-links-block
+                    padding-left: 0
+                    margin-top: 2px
+                    &::before
+                        display: none
+
+    // advantages
+    .screen
+        &-advantages
+            &-item
+                display: flex
+                align-items: center
+                margin: 10px 0
+                width: 100%
+                &__title
+                    font-size: 12px
+                    line-height: 18px
+                &__icon
+                    svg 
+                        min-width: 40px
+                        width: 40px
+                        height: 40px
+

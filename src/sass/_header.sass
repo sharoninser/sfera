@@ -148,28 +148,7 @@
             a
                 color: #202c2e
     
-.nav-menu.light:hover
-    ul 
-        li
-            background-color: rgba(0, 0, 0, 0.9)
-            transition: 0.3s ease
-            a
-                svg
-                    fill: #ffffff
-.nav-menu.dark:hover
-    ul 
-        li
-            background-color: #dcdfdf
-            transition: 0.3s ease
-            a
-                svg
-                    fill: #202c2e
-.nav-menu:hover
-    right: 0
-    ul 
-        li
-            a 
-                opacity: 1
+
 
 .nav-menu.light, .nav-menu.dark
     ul
@@ -181,25 +160,9 @@
                 color: #00d1d9
                 svg 
                     fill:  #00d1d9
-        li:hover
-            &::before
-                background-color: #00d1d9
-            a 
-                color: #00d1d9
-                svg
-                    fill: #00d1d9
-                    transition: 0.3s ease
 .nav-menu.dark
     ul 
         li.active
-            &::before
-               background-color: #0097ba
-               transition: 0.3s ease
-            a
-                color:#0097ba
-                svg 
-                    fill:  #0097ba
-        li:hover
             &::before
                background-color: #0097ba
                transition: 0.3s ease
@@ -257,7 +220,7 @@
                 text-decoration: none
                 transition: 0.3s ease
                 opacity: 0
-                span 
+                span:not(.nav-menu__text)
                     margin-right: 5px
 
     
