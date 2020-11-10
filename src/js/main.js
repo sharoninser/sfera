@@ -12,15 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesToScroll: 1,
         variableWidth: true,
 		prevArrow: '#screen-slider-team-arrow__prev',
-		nextArrow: '#screen-slider-team-arrow__next'
-		// responsive: [
-		// 	{
-		// 		breakpoint: 576,
-		// 		settings: {
-		// 			arrows: false
-		// 		}
-		// 	}
-		// ]
+		nextArrow: '#screen-slider-team-arrow__next',
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+                    variableWidth: false
+				}
+            },
+            {
+				breakpoint: 769,
+				settings: {
+                    variableWidth: true,
+                    swipe: true
+				}
+            }
+		]
     });
 
     // reviews
@@ -33,15 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
         adaptiveHeight: true,
         slidesToScroll: 1,
 		prevArrow: '#screen-slider-reviews-arrow__prev',
-		nextArrow: '#screen-slider-reviews-arrow__next'
-		// responsive: [
-		// 	{
-		// 		breakpoint: 576,
-		// 		settings: {
-		// 			arrows: false
-		// 		}
-		// 	}
-		// ]
+		nextArrow: '#screen-slider-reviews-arrow__next',
+		responsive: [
+			{
+				breakpoint: 769,
+				settings: {
+                    swipe: true
+				}
+            }
+		]
     });
 
     // partners
@@ -53,15 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesToShow: 1,
         slidesToScroll: 1,
 		prevArrow: '#screen-slider-partners-arrow__prev',
-		nextArrow: '#screen-slider-partners-arrow__next'
-		// responsive: [
-		// 	{
-		// 		breakpoint: 576,
-		// 		settings: {
-		// 			arrows: false
-		// 		}
-		// 	}
-		// ]
+		nextArrow: '#screen-slider-partners-arrow__next',
+		responsive: [
+			{
+				breakpoint: 769,
+				settings: {
+                    swipe: true
+				}
+            }
+		]
     });
 
     // content-slider

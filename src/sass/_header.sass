@@ -133,6 +133,15 @@
             a
                 svg
                     fill: #ffffff
+// nav-menu
+.nav-menu.light:hover
+    ul 
+        li
+            background-color: rgba(0, 0, 0, 0.9)
+            transition: 0.3s ease
+            a
+                svg
+                    fill: #ffffff
 .nav-menu.light.active, .nav-menu.light
     ul
         li
@@ -146,16 +155,15 @@
             &::before
                 background-color: #202c2e
             a
-                color: #202c2e
-    
+                color: #202c2e   
 
 
 .nav-menu.light, .nav-menu.dark
     ul
         li.active 
             &::before
-               background-color: #00d1d9
-               transition: 0.3s ease
+                background-color: #00d1d9
+                transition: 0.3s ease
             a
                 color: #00d1d9
                 svg 
@@ -164,12 +172,13 @@
     ul 
         li.active
             &::before
-               background-color: #0097ba
-               transition: 0.3s ease
+                background-color: #0097ba
+                transition: 0.3s ease
             a
                 color:#0097ba
                 svg 
                     fill:  #0097ba
+
         
 
 

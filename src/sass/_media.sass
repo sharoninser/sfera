@@ -2,15 +2,7 @@
     .header-nav-list-item.has-child:hover .header-nav-dropdown-menu
         display: flex
 
-    // nav-menu
-    .nav-menu.light:hover
-        ul 
-            li
-                background-color: rgba(0, 0, 0, 0.9)
-                transition: 0.3s ease
-                a
-                    svg
-                        fill: #ffffff
+
     .nav-menu.dark:hover
         ul 
             li
@@ -27,11 +19,12 @@
                     opacity: 1
 
 
-    .nav-menu.light, .nav-menu.dark
+    .nav-menu.light
         ul
             li:hover
                 &::before
                     background-color: #00d1d9
+                    transition: 0.3s ease
                 a 
                     color: #00d1d9
                     svg
@@ -49,6 +42,22 @@
                     color:#0097ba
                     svg 
                         fill:  #0097ba
+                        transition: 0.3s ease
+
+
+
+
+    .screen-view-slider-wrap:hover
+        .screen
+            &-view
+                &-slider
+                    &-item
+                        &__link
+                            height: 50px
+
+
+
+
 @media screen and (max-width: 1560px)
     // nav-menu
     .nav-menu
@@ -56,6 +65,10 @@
         right: -190px
 
 @media screen and (max-width: 1440px)
+    .nav-menu
+        right: -215px
+        ul
+            padding-left: 15px
     .screen
         &-left
             &-step
@@ -69,16 +82,54 @@
                 &__title
                     font-size: 27px
                     line-height: 29px
-        // &-team
-        //     &-slider
-        //         &-item
-        //             max-width: 570px
+    .page-building
+        .screen-view
+            .screen
+                &-view
+                    &-wrap
+                        h2 
+                            margin-bottom: 15px
+                    &-content
+                        .screen-main-links
+                            padding-left: 30px  
+                        .screen-main-links-block
+                            padding-right: 20px
+                        &-date
+                            padding-left: 30px
+                            &-item
+                                margin-right: 5%
+                                &__icon.duration 
+                                    svg
+                                        width: 30px
+                                &__icon.money 
+                                    svg
+                                        width: 30px
+                                &__text
+                                    span
+                                        font-size: 48px
+                    &-slider
+                        &-wrap
+                            height: 280px
+                            max-width: 380px
+                            bottom: -50px   
+                        &-item
+                            height: auto
+                            max-width: 380px
+                            &__link
+                                line-height: 50px
+                            &__img
+                                height: 280px
+                        &-arrow
+                            height: 172px
+                            bottom: 50px
+
+
 
 @media screen and (max-width: 1280px)
     h1
         font-size: 44px
         line-height: 54px
-    h2 
+    h2, h3 
         font-size: 28px
         line-height: 36px
     
@@ -88,6 +139,7 @@
 
     p + p
         margin-top: 30px
+
     .breadcrumb
         margin-bottom: 20px
         ul 
@@ -114,8 +166,20 @@
                 margin-top: 30px
             &-links
                 padding: 22px 44px
-    
 
+        .screen-block-production
+                .screen-block
+                    &-production
+                        &-text
+                            margin-bottom: 43px
+                            p
+                                font-size: 20px
+                                line-height: 34px
+                            ul
+                                li 
+                                    font-size: 20px
+                                    line-height: 34px
+    
     // advantages
     .screen
         &-advantages
@@ -130,7 +194,23 @@
                     padding-bottom: 10px
                 .screen-advantages-text
                     padding-top: 30px
-                    
+
+
+    // team 
+    .screen 
+        &-block
+            &-team
+                &-text 
+                    margin-bottom: 34px 
+                    p
+                        margin-bottom: 40px
+        &-team
+            &-slider 
+                height: 280px
+                &-item 
+                    max-width: 495px
+                    &__img
+                        max-width: 221px
 
 @media screen and (max-width: 1024px)
     h1 
@@ -168,6 +248,27 @@
                 &__title
                     max-width: 200px
 
+
+
+    // team 
+    .screen
+        &-team
+            &-slider 
+                height: 353px
+                &-item 
+                    max-width: 100%
+                    &__img
+                        max-width: 280px
+
+    .page-building 
+        .screen 
+            .screen-block-receive
+                .screen-advantages-text
+                    margin-bottom: 45px
+                    &::before
+                        display: none
+
+
 @media screen and (max-width: 768px) 
     .screen.screen-one
         min-height: 100vh
@@ -180,6 +281,7 @@
         min-height: auto
         padding-left: 0
         padding-right: 0
+        background-attachment: scroll
         &-top 
             padding-left: 30px
             padding-right: 30px
@@ -195,28 +297,73 @@
         display: none
 
 
-    // advantages
+    // production
     .screen
-        &-advantages
-            &-item
-                // margin: 10px 0
-                // width: 100%
+        .screen-block-production
+                .screen-block
+                    &-wrap
+                        max-width: 100%
+
+    // reviews
+    .screen 
+        &-block
+            &-reviews
+                .screen-block-wrap
+                    margin-top: 0
+        &-reviews
+            &-slider
+                &-item
+                    &__review
+                        margin-bottom: 40px
+                    &__name
+                        p 
+                            margin-bottom: 10px
+                        span 
+                            margin-bottom: 20px
+
+    // team 
+    .screen 
+        &-block
+            &-team
+                &-text
+        &-team
+            &-slider 
+                margin-left: -30px  
+                margin-right: -30px
+                width: calc(100% + 60px)
+                height: 353px
+                .slick-list
+                    padding-left: 30px
+                &-item 
+                    max-width: 595px
+                    &__img
+                        max-width: 280px
+                        margin-right: 20px
+
+    .page-building 
+        .screen 
+            .screen-block-receive
+                .screen-advantages-text
+                    margin-bottom: 30px
+
 
 @media screen and (max-width: 575px)
     h1
         font-size: 24px
         line-height: 29px
         margin-bottom: 20px
-    h2 
+    h2, h3 
         font-size: 20px
         line-height: 24px
         margin-bottom: 15px
+        max-width: 90
     p 
         font-size: 16px
         line-height: 26px
 
     p + p
         margin-top: 15px
+        
     .container
         padding-left: 15px
         padding-right: 15px
@@ -228,7 +375,7 @@
         min-height: auto
         .screen-main-block 
             margin-bottom: 0
-            
+
     .screen
         &-top 
             padding-top: 32px
@@ -251,12 +398,15 @@
                 padding: 0
                 background-color: transparent
                 &-block                    
-                    padding: 22px 0
+                    padding: 0
                     width: 100%
                     display: flex
                     justify-content: center
                     background-color: #000
-                    max-width: 340px
+                    a 
+                        padding: 22px 0
+                        width: 100%
+                        justify-content: center
                 &-block + .screen-main-links-block
                     padding-left: 0
                     margin-top: 2px
@@ -279,4 +429,109 @@
                         min-width: 40px
                         width: 40px
                         height: 40px
+    
+    // production
+    .screen
+        .screen-block-production
+            .screen-block
+                &-production
+                    &-text
+                        margin-bottom: 23px
+                        p
+                            font-size: 16px
+                            line-height: 24px
+                        ul
+                            li 
+                                font-size: 16px
+                                line-height: 24px
+    .screen.dark:not(.screen-one)
+        ul 
+            li 
+                &::before
+                    top: 13px
 
+
+    // reviews
+    .screen
+        &-block
+            &-reviews
+                .screen-main-links
+                    padding: 0
+                    a 
+                        svg
+                            height: 20px
+                            width: 20px
+                    &-block
+                        &::before
+                            display: none
+                    .screen-slider-nav 
+                        padding: 22px 0
+                        width: 100% 
+                        display: flex
+                        justify-content: center
+                        background-color: #000
+                        margin-left: 0
+                        margin-top: 2px
+                        p.screen-slider-nav__counter
+                            line-height: 20px
+        &-reviews
+            &-slider
+                &-item
+                    &__review
+                        margin-bottom: 30px
+                    &__name
+                        p 
+                            font-size: 15px
+                            line-height: 15px
+                            margin-bottom: 10px
+                        span 
+                            margin-bottom: 20px
+
+
+
+    // team 
+    .screen 
+        &-team
+            &-slider 
+                margin-left: -15px  
+                margin-right: -15px
+                width: calc(100% + 30px)
+                height: auto
+                .slick-list
+                    padding-left: 15px
+                &-item 
+                    margin-right: 15px
+                    max-width: 260px
+                    &-wrap
+                        flex-wrap: wrap
+                        align-items: cetner
+                    &__img
+                        max-width: 100%
+                        margin-right: 0
+                        width: 100% 
+                    &-info 
+                        width: 100%
+                        margin-top: 20px
+                        &__position 
+                            padding-bottom: 15px
+                            margin-bottom: 20px
+                .screen-team-slider-item-info__fio 
+                    span 
+                        font-size: 18px
+                        line-height: 24px
+        &-block
+            &-team
+                &-text 
+                    padding-bottom: 15px
+                    margin-bottom: 24px
+                    p 
+                        margin-bottom: 25px
+                    a 
+                        font-size: 13px
+
+
+    // partners
+    .screen
+        &-partners
+            &-slider
+                margin-bottom: 30px
