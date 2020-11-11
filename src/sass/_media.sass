@@ -56,6 +56,14 @@
                             height: 50px
 
 
+    .screen-view-slider-wrap
+        &:hover
+            .screen-view-slider-item__link
+                height: 65px
+                visibility: visible
+                transition: all .3s
+
+
 
 
 @media screen and (max-width: 1560px)
@@ -117,6 +125,7 @@
                             max-width: 380px
                             &__link
                                 line-height: 50px
+                                height: 50px
                             &__img
                                 height: 280px
                         &-arrow
@@ -130,7 +139,7 @@
         font-size: 44px
         line-height: 54px
     h2, h3 
-        font-size: 28px
+        font-size: 32px
         line-height: 36px
     
     p 
@@ -165,7 +174,7 @@
                 max-width: 80%
                 margin-top: 30px
             &-links
-                padding: 22px 44px
+                padding: 22px 35px
 
         .screen-block-production
                 .screen-block
@@ -211,6 +220,64 @@
                     max-width: 495px
                     &__img
                         max-width: 221px
+
+
+    .page-building
+        .screen-view
+            .screen
+                &-view
+                    &-content
+                        width: 48%
+                        .screen-main-links
+                            padding: 20px
+                            &-block + .screen-main-links-block
+                                padding-left: 10px
+                        &-date
+                            flex-wrap: wrap
+                            padding: 18px 20px 0
+                            &-item + .screen-view-content-date-item
+                                margin-top: 10px
+                            &-item 
+                                &__text
+                                    span 
+                                        font-size: 36px
+                    &-slider 
+                        &-wrap
+                            height: 271px
+                            max-width: 355px
+                            right: 40px
+                        &-item
+                            height: 271px
+                            max-width: 355px
+                            &__img
+                                height: 271px
+                        &-arrow
+                            width: 40px
+                            &_prev
+                                left: -40px
+                            &_next
+                                right: -40px
+                    &-block
+                        height: 172px
+    
+    .screen-calculate
+        .calculate
+            &-box + .calculate-box 
+                margin-top: 50px
+            &-box.main-parametrs
+                .calculate-box-wrap
+                    &::after
+                        display: none
+            &-box.main-parametrs, &-box.advanced-setting
+                width: 100%
+                padding-left: 0
+                padding-right: 0
+            &-box, &-box.info
+                margin-bottom: 0
+                &-title
+                    font-size: 20px
+                    line-height: 22px
+                
 
 @media screen and (max-width: 1024px)
     h1 
@@ -268,6 +335,83 @@
                     &::before
                         display: none
 
+
+
+    .page-building
+        .screen-view
+            padding-bottom: 7%
+            .screen
+                &-view
+                    &-wrap
+                        margin-right: 0
+                        width: 100% 
+                        h2 
+                            line-height: 36px
+                            max-width: 100%
+                            margin-bottom: 30px
+                    &-content
+                        width: 100%
+                        background-color: #000
+                        margin-bottom: 30px
+                        padding: 10px
+                        &::after
+                            display: none
+                        .screen-main-links
+                            &-block + .screen-main-links-block
+                        &-date
+                            padding: 20px
+                            &-item + .screen-view-content-date-item
+                            &-item 
+                                &__text
+                                    span 
+                    &-slider
+                        width: 100%
+                        &-wrap
+                            position: relative
+                            height: auto
+                            width: 100%
+                            right: auto
+                            bottom:  auto
+                            max-width: 415px
+                            display: flex
+                            flex-direction: column
+                            align-items: center
+                            margin-left: 50px
+                        &-item
+                            height: 317px
+                            max-width: 415px
+                            &__img
+                                height: 317px
+                            &__link
+                                position: relative
+                                height: 65px
+                                line-height: 65px
+                                opacity: 1
+                                visibility: visible
+                                display: block
+                                width: 100%
+                                max-width: 415px
+                        &-arrow
+                            bottom: 0
+                            height: 100%
+                            width: 50px
+                            &_prev
+                                left: -50px 
+                            &_next
+                                right: -50px
+                    &-block
+                        height: auto
+                        flex-direction: column
+                        align-items: flex-start
+                        background-color: transparent
+
+
+    .screen-calculate
+        .calculate
+            &-box.info
+                .calculate-box-item
+                    width: calc(50% - 30px)
+                
 
 @media screen and (max-width: 768px) 
     .screen.screen-one
@@ -347,6 +491,20 @@
                     margin-bottom: 30px
 
 
+    .screen-calculate
+        .calculate
+            &-box.info
+                .calculate-box-item
+                    width: calc(50% - 10px)
+            &-box.main-parametrs
+                .calculate-box-item
+                    width: calc(25% - 10px)
+            &-box.advanced-setting
+                .calculate-box-item
+                    width: calc(75% - 10px)
+                .calculate-box-item.counter
+                    width: calc(25% - 10px)
+
 @media screen and (max-width: 575px)
     h1
         font-size: 24px
@@ -356,7 +514,7 @@
         font-size: 20px
         line-height: 24px
         margin-bottom: 15px
-        max-width: 90
+        max-width: 90%
     p 
         font-size: 16px
         line-height: 26px
@@ -404,9 +562,14 @@
                     justify-content: center
                     background-color: #000
                     a 
-                        padding: 22px 0
+                        padding: 0
+                        height: 64px
                         width: 100%
                         justify-content: center
+                        span                           
+                            width: min-content
+                            min-width: 250px
+                            width: 250px
                 &-block + .screen-main-links-block
                     padding-left: 0
                     margin-top: 2px
@@ -535,3 +698,113 @@
         &-partners
             &-slider
                 margin-bottom: 30px
+
+
+    .page-building
+        .screen-view
+            .screen
+                &-view
+                    &-wrap
+                        h2 
+                            line-height: 28px
+                            max-width: 90%
+                            margin-bottom: 20px
+                    &-content
+                        padding: 0
+                        background-color: transparent
+                        &::after
+                        .screen-main-links
+                            &-block + .screen-main-links-block
+                        &-date
+                            flex-direction: column
+                            margin-bottom: 10px
+                            background-color: #000
+                            &-item + .screen-view-content-date-item
+                            &-item 
+                                margin-right: 0
+                                &__icon.duration, &__icon.money
+                                    svg
+                                        width: 25px
+                                        height: 20px
+                                &__text
+                                    font-size: 14px 
+                                    line-height: 16px
+                                    span 
+                                        font-size: 24px
+                                        line-height: 28px
+                        .screen-main-links
+                            padding: 0
+                            &-block + .screen-main-links-block
+                                padding-left: 0
+                            &-block
+                                padding-right: 0
+                    &-slider
+                        // max-width: 320px
+                        // height: 244px
+                        height: auto
+                        &-wrap
+                            display: block
+                            margin-left: 0
+                            max-width: none
+                            display: flex
+                            flex-direction: column
+                            align-items: center
+                        &-item
+                            height: auto
+                            width: 100%
+                            max-width: 575px
+                            &__img
+                                height: auto
+                            &__link
+                                max-width: none
+                                height: 64px
+                                line-height: 64px
+                        &-arrow
+                            display: none
+                            &_prev
+                            &_next
+    
+    .screen-calculate
+        h2 
+            margin-bottom: 30px
+            max-width: 100%
+        .calculate
+            &-box + .calculate-box
+                margin-top: 50px
+            &-box, &-box.info
+                &-title
+                    font-size: 15px
+                    line-height: 17px
+                    margin-bottom: 15px
+                .calculate-box-item
+                    width: 100%
+                .calculate-box-item:last-child
+                    margin-bottom: 0
+                &-item
+                    &-label, .calculate-box-item-title
+                        margin-bottom: 10px
+            &-box.main-parametrs
+                .calculate-box-item
+                    width: calc(50% - 10px)
+                .calculate-box-item.options.inline
+                    flex-direction: column
+                    align-items: flex-start
+                    margin-bottom: 30px
+                    p 
+                        margin-bottom: 10px
+                .calculate-box-item-radio + .calculate-box-item-radio
+                    margin-left: 10px
+            &-box.advanced-setting
+                .calculate-box-item
+                    width: calc(50% - 10px)
+                .calculate-box-item.counter
+                    width: calc(50% - 10px)
+                .calculate-box-item.inline:not(.lifting)
+                    flex-direction: column
+                    align-items: flex-start
+                    p 
+                        margin-bottom: 10px
+            &-button 
+                height: 64px
+                line-height: 64px
+                    

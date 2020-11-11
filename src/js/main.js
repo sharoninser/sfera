@@ -100,19 +100,29 @@ document.addEventListener('DOMContentLoaded', () => {
         dots: false,
         centerMode: true,
         infinite: true,
+        arrows: true,
 		slidesToShow: 1,
         slidesToScroll: 1,
         variableWidth: true,        
 		prevArrow: '#view-slider-arrow_prev1',
-		nextArrow: '#view-slider-arrow_next1'
-		// responsive: [
-		// 	{
-		// 		breakpoint: 576,
-		// 		settings: {
-		// 			arrows: false
-		// 		}
-		// 	}
-		// ]
+		nextArrow: '#view-slider-arrow_next1',
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+                    swipe: true
+				}
+            },
+            {
+				breakpoint: 576,
+				settings: {
+                    swipe: true,
+                    variableWidth: false,
+                    centerMode: false,
+                    arrows: false
+				}
+            }
+		]
     });
     // view-sldier
     $('.screen-object-desc-slider').slick({
@@ -236,5 +246,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
 
+
+    let counters = document.querySelectorAll('.calculate-box-item-counter');
+
+    counters.forEach(function(counter) {
+        let counterBtns = counter.querySelectorAll('button');
+
+        counterBtns.forEach(function(counterBtn) {
+            let parentCounterBtn = counterBtn.parentElement;
+            let counterInput = parentCounterBtn.querySelector('input');
+
+            counterBtn.addEventListener('click', function(e){
+                e.preventDefault();
+                // доделать счетчики
+            });
+        });
+    });
 
 });
