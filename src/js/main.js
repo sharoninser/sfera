@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.section-content-slider').slick({
         // loop: true,
         swipe: false,
+        arrows: true,
         dots: true,
         centerMode: true,
         infinite: true,
@@ -82,15 +83,26 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesToScroll: 1,
         variableWidth: true,        
 		prevArrow: '#section-content-slider-arrow_prev',
-		nextArrow: '#section-content-slider-arrow_next'
-		// responsive: [
-		// 	{
-		// 		breakpoint: 576,
-		// 		settings: {
-		// 			arrows: false
-		// 		}
-		// 	}
-		// ]
+		nextArrow: '#section-content-slider-arrow_next',
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+                    variableWidth: false,
+                    centerMode: false,
+                    swipe: true
+				}
+            },
+            {
+				breakpoint: 576,
+				settings: {
+                    variableWidth: false,
+                    centerMode: false,
+                    swipe: true,
+                    arrows: false
+				}
+			}
+		]
     });
 
     // view-sldier
@@ -259,6 +271,7 @@ document.addEventListener('DOMContentLoaded', () => {
             counterBtn.addEventListener('click', function(e){
                 e.preventDefault();
                 // доделать счетчики
+
             });
         });
     });

@@ -132,6 +132,18 @@
                             height: 172px
                             bottom: 50px
 
+    .section-preview
+        padding-left: 5%
+        padding-right: 5%
+    .section-preview.type_1
+        .preview
+            &-list
+                &-item
+                    width: calc(33.333% - 34px)
+                    &__img
+                        height: 249px
+
+
 
 
 @media screen and (max-width: 1280px)
@@ -277,8 +289,81 @@
                 &-title
                     font-size: 20px
                     line-height: 22px
-                
 
+
+
+
+    .page-building-detail
+        .section
+            &-desc
+                padding-top: 100px
+                padding-bottom: 100px
+                &-text 
+                    margin-bottom: 50px
+                &-advantages
+                    &-block
+                        h3 
+                            margin-bottom: 10px
+                    &-item
+                        width: 33.333%
+                        &__title
+                            font-size: 14px
+                            line-height: 22px
+    
+    // .section-preview
+    .section-preview.type_1
+        padding-top: 80px
+        padding-bottom: 100px
+        .preview
+            &-list
+                &-item
+                    width: calc(33.333% - 25px)
+                    &__img
+                        height: 224px
+                    &__title
+                        font-size: 15px
+                        line-height: 22px
+                    &__desc
+                        font-size: 12px
+                        line-height: 22px
+
+
+    .section
+        &-preview
+            &-top
+                margin-bottom: 34px
+
+
+
+
+    .preview
+        &-list
+            &-item
+                &__date
+                    left: -25px
+                    &_text
+                        font-size: 13px
+                    &_icon
+                        svg
+                            width: 18px
+                            height: 14px
+
+
+
+    .section
+        &-content
+            &-middle
+                article + article 
+                    margin-top: 70px
+                article 
+                    img
+                        margin-top: 70px
+            &-article
+                &-intro
+                    margin-bottom: 0
+            
+
+                
 @media screen and (max-width: 1024px)
     h1 
         margin-bottom: 55px
@@ -411,9 +496,96 @@
             &-box.info
                 .calculate-box-item
                     width: calc(50% - 30px)
-                
+    
+
+    .page-building-detail
+        .section
+            &-desc
+                padding-top: 80px
+                padding-bottom: 80px
+                &-text
+                    padding-top: 20px
+                &-advantages
+                    &-item
+                        width: 50%
+                        &__title
+                            max-width: 200px
+
+
+
+    
+    .page-news-detail
+        .screen
+            &-main
+                &-date
+                    top: -35px
+                    left: 25px
+                    flex-direction: row
+                    align-items: center
+                    &__icon
+                        margin-bottom: 0
+                        margin-right: 10px
+                        &::after 
+                            display: none
+                    &__text
+                        font-size: 16px
+                        writing-mode: initial
+                        transform: none
+
+
+    // section-preview
+    .section-preview
+        &-link
+            font-size: 14px
+            line-height: 16px
+    .section-preview.type_1
+        .preview
+            &-list
+                &-item:last-child 
+                    display: none
+                &-item
+                    width: calc(50% - 20px)
+                    &__img
+                        height: 271px
+
+
+    .section
+        &-content
+            &-block
+                padding-top: 80px
+                padding-bottom: 80px
+            &-middle
+                article + article 
+                    margin-top: 40px
+                article
+                    img
+                        margin: 40px 0
+
+
+    .section
+        &-content 
+            &-slider 
+                .slick-dots
+                    bottom: -45px
+                &-item 
+                    margin: 0
+                    &__img
+                        height: auto
+                &-wrap
+                    margin-top: 80px
+                    margin-bottom: 60px
+                    width: 100%
+                    margin-left: 0
+                    margin-right: 0
+
 
 @media screen and (max-width: 768px) 
+    .breadcrumb
+        ul 
+            li + li
+                margin-left: 20px
+                &:before 
+                    left: -10px
     .screen.screen-one
         min-height: 100vh
         &::before
@@ -504,6 +676,89 @@
                     width: calc(75% - 10px)
                 .calculate-box-item.counter
                     width: calc(25% - 10px)
+
+
+
+    .page-building-detail
+        .screen.screen-one
+            .screen
+                &-main
+                    &-numbers
+                        margin-bottom: 35px
+                        &-item
+                            &__text
+                                font-size: 14px
+                                line-height: 16px
+                                span
+                                    font-size: 48px
+                                    line-height: 52px
+        .section
+            &-desc
+                padding-top: 50px
+                padding-bottom: 50px
+                padding-left: 0
+                padding-right: 0
+                &-text
+                    padding-top: 20px
+                    margin-bottom: 30px
+                &-advantages
+                    &-item
+                        width: 50%
+                        &__title
+                            max-width: 200px
+
+
+    .page-news-detail
+        .screen
+            &-main
+                p.screen-main__text
+                    margin-bottom: 0
+
+
+    // section-preview
+    .section-preview
+        padding-left: 0
+        padding-right: 0
+        &-link 
+            white-space: nowrap
+            margin-left: 15px
+    .section-preview.type_1
+        padding-top: 50px
+        padding-bottom: 70px
+        .preview
+            &-list
+                &-item:last-child 
+                    display: none
+                &-item
+                    width: calc(50% - 20px)
+                    &__img
+                        height: 220px
+
+
+    .section
+        &-content
+            &-middle
+                padding-left: 0
+                padding-right: 0
+
+
+
+
+    .section
+        &-content 
+            &-slider 
+                padding-left: 50px
+                padding-right: 50px
+                &-arrow
+                    width: 50px
+                    height: 60px
+                    background-color: #000
+                &-item 
+                    &__img
+                &-wrap
+                    margin-top: 60px
+                    &::before 
+                        display: none
 
 @media screen and (max-width: 575px)
     h1
@@ -808,3 +1063,125 @@
                 height: 64px
                 line-height: 64px
                     
+
+    .page-building-detail
+        .screen.screen-one
+            .screen-main
+                .screen
+                    &-main
+                        &-numbers
+                            flex-wrap: wrap
+                            &-item:first-child
+                                margin-right: 10px
+                            &-item + .screen-main-numbers-item
+                                margin-left: 0
+                                margin-top: 5px
+                            &-item
+                                &__icon.duration, &__icon.money
+                                    svg
+                                        width: 30px
+                                        height: 22px
+
+                                &__text
+                                    font-size: 14px
+                                    line-height: 16px
+                                    span
+                                        font-size: 32px
+                                        line-height: 34px
+        .section
+            &-desc
+                &-advantages
+                    &-item
+                        display: flex
+                        align-items: center
+                        margin: 10px 0
+                        width: 100%
+                        &__title
+                            font-size: 12px
+                            line-height: 18px
+                        &__icon
+                            svg
+                                min-width: 40px
+                                width: 40px
+                                height: 40px
+
+
+    .page-news-detail
+        h1 
+            margin-bottom: 40px
+        .screen
+            &-main
+                &-date
+                    left: 15px
+                    top: -25px
+                    &__icon
+                        width: 20px
+                        height: 20px
+                        svg
+                            width: 20px
+                            height: 20px
+                    &__text
+                        font-size: 14px
+
+
+    // section-preview
+    .section-preview
+        padding-left: 0
+        padding-right: 0
+        &-link 
+            white-space: nowrap
+            margin-left: 15px
+            font-size: 12px
+            line-height: 14px
+        .preview
+            &-list
+                flex-direction: column            
+                &-item + .preview-list-item 
+                    margin-top: 30px
+                &-item
+                    &__date
+                        left: -22px
+    .section-preview.type_1
+        .preview
+            &-list
+                &-item:last-child 
+                    display: block
+                &-item
+                    width: 100%
+                    &__img
+                        height: auto
+
+
+    .section
+        &-content
+            &-block
+                padding-top: 50px
+                padding-bottom: 50px
+            &-middle
+                article + article 
+                    margin-top: 25px
+                article 
+                    p
+                        font-size: 16px
+                        line-height: 26px
+                article.level-2 
+                    margin-top: 25px
+                article 
+                    ul, ol
+                        padding-left: 35px
+                        li 
+                            font-size: 16px
+                            line-height: 26px
+                        li + li 
+                            margin-top: 7px
+    
+    .section
+        &-content 
+            &-slider 
+                padding-left: 0
+                padding-right: 0
+                &-arrow
+                    display: none
+                &-item 
+                    &__img
+                &-wrap

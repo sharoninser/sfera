@@ -11,7 +11,7 @@
 </head>
 <body>
    
-    <header class="header">
+    <!-- <header class="header">
         <a href="#" class="header-logo">
             <img src="img/logo.png" alt="Логотип">
         </a>
@@ -47,7 +47,7 @@
                 </a>
             </div>
         </div>
-    </header>
+    </header> -->
     <div id="btn-scroll-up" class="btn-scroll-up hidden">
         <a href="#top">
             <span>
@@ -138,7 +138,7 @@
                                         <use xlink:href="img/sprite.svg#advantages-icon4"></use>
                                     </svg>
                                 </div>
-                                <div class="section-desc-advantages-item__title">преимущество зданий 3 </div>
+                                <p class="section-desc-advantages-item__title">преимущество зданий 3 </p>
                             </div>
                             <div class="section-desc-advantages-item">
                                 <div class="section-desc-advantages-item__icon">
@@ -146,7 +146,7 @@
                                         <use xlink:href="img/sprite.svg#advantages-icon4"></use>
                                     </svg>
                                 </div>
-                                <div class="section-desc-advantages-item__title">преимущество зданий 3 </div>
+                                <p class="section-desc-advantages-item__title">преимущество зданий 3 </p>
                             </div>
                             <div class="section-desc-advantages-item">
                                 <div class="section-desc-advantages-item__icon">
@@ -154,7 +154,7 @@
                                         <use xlink:href="img/sprite.svg#advantages-icon4"></use>
                                     </svg>
                                 </div>
-                                <div class="section-desc-advantages-item__title">преимущество зданий 3 </div>
+                                <p class="section-desc-advantages-item__title">преимущество зданий 3 </p>
                             </div>
                             <div class="section-desc-advantages-item">
                                 <div class="section-desc-advantages-item__icon">
@@ -162,7 +162,7 @@
                                         <use xlink:href="img/sprite.svg#advantages-icon4"></use>
                                     </svg>
                                 </div>
-                                <div class="section-desc-advantages-item__title">преимущество зданий 3 </div>
+                                <p class="section-desc-advantages-item__title">преимущество зданий 3 </p>
                             </div>
                         </div>
                     </div>
@@ -253,8 +253,187 @@
             </div>
 
         </section>
+        <section class="screen light">
+            <div class="screen-block screen-calculate">
+                <div class="container">
+                    <div class="screen-block-wrap">
+                        <h2 class="title">оставить заявку на  строительство здания</h2>
+                        <div class="calculate-wrap">
+                            <form action="#" class="calculate">
+                                <div class="calculate-box info">
+                                    <p class="calculate-box-title">Информация о заказчике</p>
+                                    <div class="calculate-box-wrap">
+                                        <div class="calculate-box-item">
+                                            <label for="calculate-box-item__organization-name" class="calculate-box-item-label">
+                                                Название организации<span><sup></sup>*</span>
+                                            </label>
+                                            <input type="text" name="" id="calculate-box-item__organization-name" placeholder="Название организации" required>
+                                        </div>
+                                        <div class="calculate-box-item">
+                                            <label for="calculate-box-item__fio" class="calculate-box-item-label">
+                                                контактное лицо<span><sup></sup>*</span>
+                                            </label>
+                                            <input type="text" name="" id="calculate-box-item__fio" placeholder="ФИО" required>
+                                        </div>
+                                        <div class="calculate-box-item">
+                                            <label for="calculate-box-item__tel" class="calculate-box-item-label">
+                                                Контактный телефон<span><sup></sup>*</span>
+                                            </label>
+                                            <input type="tel" name="" id="calculate-box-item__tel" placeholder="+7(   )" required>
+                                        </div>
+                                        <div class="calculate-box-item">
+                                            <label for="calculate-box-item__email" class="calculate-box-item-label">
+                                                контактный e-mail<span><sup></sup>*</span>
+                                            </label>
+                                            <input type="email" name="" id="calculate-box-item__email" placeholder="E-mail" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calculate-box main-parametrs">
+                                    <p class="calculate-box-title">основные параметры здания</p>
+                                    <div class="calculate-box-wrap">
+                                        <div class="calculate-box-item">
+                                            <label for="calculate-box-item__width" class="calculate-box-item-label">
+                                                ширина (м)
+                                            </label>
+                                            <input type="number" name="" id="calculate-box-item__width" placeholder="Ширина">
+                                        </div>
+                                        <div class="calculate-box-item">
+                                            <label for="calculate-box-item__length" class="calculate-box-item-label">
+                                                длина (м)
+                                            </label>
+                                            <input type="number" name="" id="calculate-box-item__length" placeholder="Длина">
+                                        </div>
+                                        <div class="calculate-box-item">
+                                            <label for="calculate-box-item__height" class="calculate-box-item-label">
+                                                высота (м)
+                                            </label>
+                                            <input type="number" name="" id="calculate-box-item__height" placeholder="Высота">
+                                        </div>
+                                        <div class="calculate-box-item">
+                                            <label for="calculate-box-item-counter__input_1" class="calculate-box-item-label">
+                                                количество этажей
+                                            </label>
+                                            <div class="calculate-box-item-counter">
+                                                <button class="calculate-box-item-counter__btn calculate-box-item-counter__btn_minus btn-dec"></button>
+                                                <input type="number" min="1" name="" id="calculate-box-item-counter__input_1" value="1">
+                                                <button class="calculate-box-item-counter__btn calculate-box-item-counter__btn_plus btn-inc"></button>
+                                            </div>
+                                        </div>
+                                        <div class="calculate-box-item options inline">
+                                            <p class="calculate-box-item-title">
+                                                Варианты исполнения:
+                                            </p>
+                                            <div class="calculate-box-item-radio-wrap">
+                                                <div class="calculate-box-item-radio">
+                                                    <label class="calculate-box-item-radio__label" for="calculate-box-item-radio__input_warm">
+                                                        <input type="radio" name="options" id="calculate-box-item-radio__input_warm" checked>
+                                                        <div></div>
+                                                        <span>Теплый</span>
+                                                    </label>
+                                                </div>
+                                                <div class="calculate-box-item-radio">
+                                                    <label class="calculate-box-item-radio__label" for="calculate-box-item-radio__input_heat-insulated">
+                                                        <input type="radio" name="options" id="calculate-box-item-radio__input_heat-insulated">
+                                                        <div></div>
+                                                        <span>Утепленный</span>
+                                                    </label>
+                                                </div>
+                                                <div class="calculate-box-item-radio">
+                                                    <label class="calculate-box-item-radio__label" for="calculate-box-item-radio__input_cold">
+                                                        <input type="radio" name="options" id="calculate-box-item-radio__input_cold">
+                                                        <div></div>
+                                                        <span>Холодный</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="calculate-box-item building_site">
+                                            <label for="calculate-box-item-counter__building_site" class="calculate-box-item-label">
+                                                Место застройки
+                                            </label>
+                                            <textarea name="" id="calculate-box-item-counter__building_site" placeholder="Местоположение здания"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calculate-box advanced-setting">
+                                    <p class="calculate-box-title">дополнительные параметры</p>
+                                    <div class="calculate-box-wrap">
+                                        <div class="calculate-box-item">
+                                            <label for="calculate-box-item__window_size" class="calculate-box-item-label">
+                                                размер окон (м)
+                                            </label>
+                                            <input type="text" name="" id="calculate-box-item__window_size" placeholder="Ш Х В">
+                                        </div>
+                                        <div class="calculate-box-item counter">
+                                            <label for="calculate-box-item-counter__input_2" class="calculate-box-item-label">
+                                                количество окон
+                                            </label>
+                                            <div class="calculate-box-item-counter">
+                                                <button class="calculate-box-item-counter__btn calculate-box-item-counter__btn_minus btn-dec"></button>
+                                                <input type="number" min="1" name="" id="calculate-box-item-counter__input_2" value="1">
+                                                <button class="calculate-box-item-counter__btn calculate-box-item-counter__btn_plus btn-inc"></button>
+                                            </div>
+                                        </div>
+                                        <div class="calculate-box-item">
+                                            <label for="calculate-box-item__door_size" class="calculate-box-item-label">
+                                                размер ворот (м)
+                                            </label>
+                                            <input type="text" name="" id="calculate-box-item__door_size" placeholder="Ш Х В">
+                                        </div>
+                                        <div class="calculate-box-item counter">
+                                            <label for="calculate-box-item-counter__input_3" class="calculate-box-item-label">
+                                                количество ворот
+                                            </label>
+                                            <div class="calculate-box-item-counter">
+                                                <button class="calculate-box-item-counter__btn calculate-box-item-counter__btn_minus btn-dec"></button>
+                                                <input type="number" min="1" name="" id="calculate-box-item-counter__input_3" value="1">
+                                                <button class="calculate-box-item-counter__btn calculate-box-item-counter__btn_plus btn-inc"></button>
+                                            </div>
+                                        </div>
+                                        <div class="calculate-box-item lifting inline">
+                                            <p class="calculate-box-item-title">
+                                                Грузоподъемное оборудование:
+                                            </p>
+                                            <div class="calculate-box-item-slider">
+                                                <input type="checkbox" name="" id="calculate-box-item-slider__input">
+                                                <label class="calculate-box-item-slider__label" for="calculate-box-item-slider__input">
+                                                    <span>off</span>
+                                                    <span>on</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="calculate-box-item inline">
+                                            <p class="calculate-box-item-title">
+                                                Техническое задание (до 8 Мб):
+                                            </p>
+                                            <div class="calculate-box-item-upload">
+                                                <label>
+                                                    <input name="file" type="file" class="calculate-box-item-upload__default"/>
+                                                    <div>Файл</div>
+                                                    <input class="calculate-box-item-upload__input" type="text" id="f_name" value="Файл не выбран." disabled />                                        
+                                                </label>
+                                            </div>                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calculate-box-item-check">
+                                    <input type="checkbox" name="" id="calculate-box-item-check__input">
+                                    <label class="calculate-box-item-check__label" for="calculate-box-item-check__input">
+                                        <span>Нажимая кнопку «Отправить», вы соглашаетесь с условиями <a href="#">Пользовательского соглашения</a></span>
+                                    </label>
+                                </div>
+                                <div class="calculate-box-item-btn">
+                                    <input class="calculate-button" type="submit" value="Отправить заявку">
+                                </div>                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer id="footer" class="footer">
+    <!-- <footer id="footer" class="footer">
         <div class="footer-top" style="background-image: url('img/footer-bg.jpg');">
             <div class="footer-top-left">
                 <a href="#" class="footer-top-left-logo">
@@ -377,7 +556,7 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/slick.min.js"></script>
