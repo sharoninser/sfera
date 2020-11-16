@@ -67,6 +67,12 @@
                 span
                     font-weight: 700
 
+.header
+    &-nav
+        &-btn 
+            &-mobile
+                display: none
+
 .screen:not(.screen-one)
     display: flex
     align-items: center
@@ -850,8 +856,8 @@
                     padding-top: 25px
                     padding-bottom: 33px
                     &-block + .screen-main-links-block
-                        &::before
-                            display: none
+                        // &::before
+                        //     display: none
                     &-block
                         padding-right: 66px
                 &-date
@@ -954,11 +960,16 @@
             &-list
                 &-filter
                     display: flex
+                    flex-wrap: wrap
+                    &-dropdown
+                        display: none
                     &-block
                         margin-top: 9px
                         margin-bottom: 43px
-                    &-item + .screen-catalog-list-filter-item
-                        margin-left: 36px
+                    &-item
+                        margin-right: 36px
+                    &-item:last-child
+                        margin-right: 0
                     &-item
                         a
                             display: block
@@ -968,7 +979,7 @@
                             font-weight: 700
                             text-transform: uppercase
                             text-decoration: none
-                            padding-bottom: 0px
+                            white-space: nowrap
                         a.active 
                             color: #1291b6 
                             border-bottom: 2px solid #1291b6
@@ -977,11 +988,6 @@
                     justify-content: space-between
                     flex-wrap: wrap
                     margin-bottom: 100px
-                &-item
-                    &:hover
-                        .screen-catalog-list-item-text__link
-                            top: 0
-                            transition: top .3s
                 &-item
                     &-text 
                         position: relative
@@ -1013,14 +1019,19 @@
                         img 
                             object-fit: cover
                             width: 100%
-                            height: 100%
+                            height: auto
                     &__title
                         color: #1f272a
                         text-transform: uppercase
-                        padding-right: 35px
+                        // padding-right: 35px
+                        max-width: 395px
                     &__subtitle
                         color: #1f272a
                         text-transform: uppercase
+                    &:hover 
+                        .screen-catalog-list-item-text__link
+                            top: 0
+                            transition: top .3s
                 &-pagination
                     text-decoration: none
                     display: flex
@@ -1051,11 +1062,15 @@
                 &-item:nth-last-child(-n+3)
                     margin-bottom: 0
                 &-item
+                    display: flex
+                    flex-direction: column
                     position: relative
                     margin-bottom: 97px
                     width: calc(33.333% - 43px)
+                    &-text
+                        flex-grow: 1
                     &__img
-                        height: 307px
+                        height: auto
                         width: 100%
                     &__title
                         font-size: 17px
@@ -1104,11 +1119,15 @@
                 &-item:nth-last-child(-n+4)
                     margin-bottom: 0
                 &-item
+                    display: flex
+                    flex-direction: column
                     position: relative
                     margin-bottom: 60px
                     width: calc(25% - 48px)
+                    &-text
+                        flex-grow: 1
                     &__img
-                        height: 220px
+                        height: auto
                         width: 100%
                     &__title
                         font-size: 14px
@@ -1226,11 +1245,11 @@
                             margin-right: 32px
                             height: auto
                             &__img
-                                height: 540px
+                                height: auto
                                 img
                                     object-fit: cover
                                     width: 100%
-                                    height: 100% 
+                                    height: auto 
                     
             
 /*                   CONTACTS                      */
@@ -1346,6 +1365,7 @@
                             padding: 10px 18px
                             width: 100%
                             border: none
+                            border-radius: 0
                         textarea
                             resize: none
                             height: 69px
@@ -1404,6 +1424,7 @@
                         max-width: 413px
                         border: none
                         cursor: pointer
+                        border-radius: 0
 
 
 

@@ -16,6 +16,12 @@
             <img src="img/logo.png" alt="Логотип">
         </a>
         <div class="header-nav-wrap">
+            <div data-fancybox data-type="ajax" data-src="/include/header/popup_menu.php" class="header-nav-btn-mobile" >
+                <div class="header-nav-btn-mobile__icon">
+                    <span></span>
+                </div>
+                <p class="header-nav-btn-mobile__text">Меню</p>
+            </div>
             <nav class="header-nav">
                 <ul class="header-nav-list">
                     <li class="header-nav-list-item"><a href="#">О компании</a></li>
@@ -71,6 +77,15 @@
             </div>
             <div class="screen-catalog-list type_1">
                 <div class="screen-catalog-list-filter-block">
+                    <div class="screen-catalog-list-filter-dropdown">
+                        <label for="#">Фильтр</label>
+                        <input class="screen-catalog-list-filter-dropdown__input" type="text" disabled="disabled">
+                        <div class="screen-catalog-list-filter-dropdown__chevron">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#filter-chevron"></use>
+                            </svg>
+                        </div>
+                    </div>
                     <ul class="screen-catalog-list-filter">
                         <li class="screen-catalog-list-filter-item"><a href="#" class="active">Все</a></li>
                         <li class="screen-catalog-list-filter-item"><a href="#">2017</a></li>

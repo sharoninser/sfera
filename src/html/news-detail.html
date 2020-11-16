@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Объект</title>
+    <title>Новость</title>
     <link rel="stylesheet" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   
-    <header class="header">
+
+    <!-- <header class="header">
         <a href="#" class="header-logo">
             <img src="img/logo.png" alt="Логотип">
         </a>
         <div class="header-nav-wrap">
-            <div data-fancybox data-type="ajax" data-src="/include/header/popup_menu.php" class="header-nav-btn-mobile" >
-                <div class="header-nav-btn-mobile__icon">
-                    <span></span>
-                </div>
-                <p class="header-nav-btn-mobile__text">Меню</p>
-            </div>
             <nav class="header-nav">
                 <ul class="header-nav-list">
                     <li class="header-nav-list-item"><a href="#">О компании</a></li>
@@ -53,7 +47,7 @@
                 </a>
             </div>
         </div>
-    </header>
+    </header> -->
     <div id="btn-scroll-up" class="btn-scroll-up hidden">
         <a href="#top">
             <span>
@@ -63,102 +57,109 @@
             </span>
             Наверх
         </a>
-    </div> 
-    <main class="page-object-detail">
-        <section id="top" class="screen screen-one light">
+    </div>    
+    <main class="page-news-detail">
+        <section id="top" class="screen screen-one dark">
             <div class="screen-top">
                 <div class="breadcrumb">
                     <ul>
                         <li><a href="#" class="breadcrumb-item">Главная</a></li>
-                        <li><a href="#" class="breadcrumb-item">Объекты</a></li>
-                        <li><span class="breadcrumb-item">Склад готовой продукции</span></li>
+                        <li><a href="#" class="breadcrumb-item">Новости</a></li>
+                        <li><span class="breadcrumb-item">Назван лучший архитектурный проект мира 2018 года</span></li>
                     </ul>
                 </div>
-                <h1>Склад готовой продукции</h1>
-            </div> 
-            <div class="screen-object-desc">
-                <div class="screen-object-desc-left">
-                    <p class="screen-object-desc-location">
+                <h1>Назван лучший архитектурный проект мира 2018 года</h1>
+            </div>
+            <div class="screen-main" style="background-image: url('img/bg-news-detail-screen-one.jpg');">
+                <div class="screen-main-block">
+                    <div class="container">
+                        <div class="screen-main-wrap">
+                            <p class="screen-main__text">Проект здания этнографического музея в Будапеште стал лидером в борьбе за звание лучшего архитектурного проекта 2018 года. Эксперты отметили в том числе динамичный дизайн будущего здания, а также его гармоничное сочетание с природой парка, в котором будет находиться музей.</p>
+                        </div>                    
+                    </div>               
+                </div>  
+                <div class="screen-main-date">
+                    <div class="screen-main-date__icon">
                         <svg>
-                            <use xlink:href="img/sprite.svg#icon-location"></use>
+                            <use xlink:href="img/sprite.svg#date-icon"></use>
                         </svg>
-                        <span>г. Спасск-Рязанский, Рязанская область</span>
-                    </p>
-                    <p>Описание  объекта около 1,7 тыс. проектов из 115 стран. Эксперты отметили в том числе динамичный дизайн будущего здания, а также его гармоничное сочетание с природой парка, в котором будет находиться музей. В феврале стало известно, что московский парк «Зарядье» стал лауреатом премии портала ArchDaily в номинации «Лучший проект в области общественных пространств». Также «Вечерняя Москва»
-                    </p>
-                    <div class="screen-object-desc-block">
-                        <div class="screen-object-desc-numbers">
-                            <div class="screen-object-desc-numbers-item">
-                                <div class="screen-object-desc-numbers-item__icon date-icon-light_type2">
-                                    <svg>
-                                        <use xlink:href="img/sprite.svg#date-icon-light_type2"></use>
-                                    </svg>
-                                </div>
-                                <div class="screen-object-desc-numbers-item__text">
-                                    Декабрь
-                                    <span>2018</span>
+                    </div>
+                    <div class="screen-main-date__text">
+                        16 декабря <span>2018</span>
+                    </div>
+                </div>       
+            </div>
+        </section>
+        <section class="screen section-content light">
+            <div class="container">
+                <div class="section-content-block">
+                    <div class="section-content-middle">
+                        <article class="section-content-article section-content-article-intro level-1">
+                            <h2>О конкурсе</h2>
+                            <p>Об этом сообщается <a href="#">на сайте международной премии</a> в области недвижимости International Property Awards. В конкурсе приняли участие около 1,7 тыс. проектов из 115 стран. Эксперты отметили в том числе динамичный дизайн будущего здания, а также его гармоничное сочетание с природой парка, в котором будет находиться музей. В феврале стало известно, что московский парк «Зарядье» стал лауреатом премии портала ArchDaily в номинации «Лучший проект в области общественных пространств». Также «Вечерняя Москва» передавала, что жители российской столицы смогут приобрести в кассах городского метро карту «Тройка» с дизайном, который посвящён «Зарядью».</p>
+                        </article>
+                        <article class="section-content-article level-1">
+                            <h2>Уровень 1. Атриум — место встречи изменить нельзя</h2>
+                            <p>Конечно, главным местом встречи является первый этаж, где расположен Атриум. Он полностью tобщественной гостиной. Пенсионеры приходят сюда, чтобы общаться. Здесь также проводятся всевозможные общественные мероприятия и события, можно присоединиться к сезонным празднованиям, и даже сходить в магазин.</p>
+                            <article class="section-content-article level-2">
+                                <h3>Структура и функции</h3>
+                                <p>WOHA были изначально поставлены в жесткие рамки 9000 м² площади и 45 м высоты. Структура поделена на три уровня, которые наслаиваются друг на друга: Атриум (People’s Plaza), Медицинский Центр посередине, и Общественный Парк с квартирами-студиями пожилых обитателей на верхнем уровне. Архитекторы таким образом хотели разнообразить привычное движение внутри здания, где люди находятся в рамках одного этажа, максимум двух. Здесь обитатели призваны передвигаться, заводить новые знакомства и всеми силами включаться в процесс социализации. Недаром квартиры невелики — уже их размер приглашает обитателя выйти из замкнутого пространства и окунуться в кипящую жизнь дома.</p>
+                                <img src="img/news-detail-img1.jpg" alt="Структура проекта">
+                                <h3>Варианты квартир</h3>
+                                <p>Помимо жизни сообщества, архитекторы также продумали более близкие отношения — отношения соседей. Между входами в квартиры расположены «приятельские скамейки», которые должны простимулировать жителей на знакомство и дальнейшее общение. Из функциональной начинки: в квартирах продуманы натуральная вентиляция и максимально оптимальный дневной свет. Источники возобновляемой энергии дополняют умный дизайн квартир.</p>
+                                <h4>Квартиры идут в двух вариантах:</h4>
+                                <ol>
+                                    <li><span>Для одиноких людей;</span></li>
+                                    <li><span>Для пар.</span></li>
+                                </ol> 
+                                <p>Не стоит думать, что Kampung Admiralty — это закрытое пространство, если не для избранных, то по крайней мере только для пожилых людей. Здесь присутствуют также зоны, выделенные под дополнительные программы, где дети и молодежь взаимодействуют с пенсионерами. Вместе они могут играть, гулять и обедать.</p>
+                            </article>
+                        </article>
+                        <article class="section-content-article level-1">
+                            <h2>Уровень 2. Постижение дзена в очереди ко врачу</h2>
+                            <p>Сердцем комплекса является Медицинский Центр. Он позволяет жителям не выходить за пределы здания, когда им нужно попасть ко врачу.</p>
+                            <h4>Продуманы мельчайшие детали:</h4>
+                            <ul>
+                                <li><span>зона ожидания;</span></li>
+                                <li><span>консультации;</span></li>
+                                <li><span>комнаты отдыха;</span></li>
+                                <li><span>зеленые парковые зоны.</span></li>
+                            </ul> 
+                        </article>
+                        <article class="section-content-article level-1">
+                            <h2>Уровень 3. Общественный Парк: прогулки, спорт и садоводство</h2>
+                            <p><span>Общественный парк</span> — единственный из трех страт, заметный с улицы, является несколько более приватной зоной, чем Атриум и Медицинский Центр. Помимо прогулок, здесь пенсионеры могут выращивать собственные растения и выполнять физические упражнения.</p>
+                        </article>
+                    </div>
+                    <div class="section-content-slider-wrap">
+                        <div class="section-content-slider">
+                            <div class="section-content-slider-item">
+                                <div class="section-content-slider-item__img">
+                                    <img src="img/news-detail-img2.jpg" alt="slide">
                                 </div>
                             </div>
-                            <div class="screen-object-desc-numbers-item">
-                                <div class="screen-object-desc-numbers-item__icon icon-roulette">
-                                    <svg>
-                                        <use xlink:href="img/sprite.svg#icon-roulette"></use>
-                                    </svg>
+                            <div class="section-content-slider-item">
+                                <div class="section-content-slider-item__img">
+                                    <img src="img/news-detail-img2.jpg" alt="slide">
                                 </div>
-                                <div class="screen-object-desc-numbers-item__text">
-                                    <span>500</span>
-                                    м<sup>2</sup>
+                            </div>
+                            <div class="section-content-slider-item">
+                                <div class="section-content-slider-item__img">
+                                    <img src="img/news-detail-img2.jpg" alt="slide">
                                 </div>
                             </div>
                         </div>
-                        <div class="screen-object-desc-links">
-                            <a href="#" class="screen-object-desc-link">
-                                Заказать похожий объект
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#link-arrow-small"></use>
-                                </svg>
-                            </a>
+                        <div id="section-content-slider-arrow_prev" class="section-content-slider-arrow section-content-slider-arrow_prev">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#slider-arrow-prev"></use>
+                            </svg>
+                        </div>
+                        <div id="section-content-slider-arrow_next" class="section-content-slider-arrow section-content-slider-arrow_next">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#slider-arrow-next"></use>
+                            </svg>
                         </div>
                     </div>
-                </div>
-                <div class="screen-object-desc-right">
-                    <div class="screen-object-desc-slider-wrap">
-                        <div class="screen-object-desc-slider js-slider">
-                            <div class="screen-object-desc-slider-item js-slider-item">
-                                <div class="screen-object-desc-slider-item__img">
-                                    <img src="img/object-detail-img1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="screen-object-desc-slider-item js-slider-item">
-                                <div class="screen-object-desc-slider-item__img">
-                                    <img src="img/object-detail-img1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="screen-object-desc-slider-item js-slider-item">
-                                <div class="screen-object-desc-slider-item__img">
-                                    <img src="img/object-detail-img1.jpg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="screen-object-desc-slider-nav">
-                            <div class="screen-slider-nav">
-                                <span id="screen-slider-object-detail-arrow__prev" class="screen-slider-nav-arrow screen-slider-nav-arrow__prev">
-                                    <svg>
-                                        <use xlink:href="img/sprite.svg#slider-arrow-prev"></use>
-                                    </svg>
-                                </span>
-                                <p class="screen-slider-nav__counter">
-                                    <span class="screen-slider-nav__counter-current"></span> / <span class="screen-slider-nav__counter-all"></span>
-                                </p>
-                                <span id="screen-slider-object-detail-arrow__next" class="screen-slider-nav-arrow screen-slider-nav-arrow__next">
-                                    <svg>
-                                        <use xlink:href="img/sprite.svg#slider-arrow-next"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
         </section>
@@ -166,9 +167,9 @@
             <div class="container-fluid">
                 <div class="section-preview-block">
                     <div class="section-preview-top">
-                        <h2>Похожие объекты</h2>
+                        <h2>Похожие новости</h2>
                         <a href="#" class="section-preview-link">
-                            Все объекты
+                            Все новости
                             <svg>
                                 <use xlink:href="img/sprite.svg#link-arrow-small"></use>
                             </svg>
@@ -179,34 +180,28 @@
                             <div class="preview-list-item">
                                 <a href="#" class="preview-list-item-link">
                                     <div class="preview-list-item__img">
-                                        <img src="img/building-detail-img1.jpg" alt="preview">
+                                        <img src="img/news-detail-img3.jpg" alt="preview">
                                     </div>
                                     <p class="preview-list-item__title">
-                                        Склад готовой продукции
+                                        «Будет много стекла»: каким построят Центра самбо и бокса в «Лужниках»
                                     </p>
-                                    <p class="preview-list-item__desc">
-                                        ул. Киквидзе, г. Тамбов
-                                    </p>                                    
                                     <div class="preview-list-item__date">
                                         <div class="preview-list-item__date_icon">
                                             <svg>
                                                 <use xlink:href="img/sprite.svg#date-icon-small"></use>
                                             </svg>
                                         </div>
-                                        <p class="preview-list-item__date_text">июль <span>2018</span></p> 
+                                        <p class="preview-list-item__date_text">15 декабря <span>2018</span></p> 
                                     </div>
                                 </a>
                             </div>
                             <div class="preview-list-item">
                                 <a href="#" class="preview-list-item-link">
                                     <div class="preview-list-item__img">
-                                        <img src="img/building-detail-img2.jpg" alt="preview">
+                                        <img src="img/news-detail-img4.jpg" alt="preview">
                                     </div>
                                     <p class="preview-list-item__title">
-                                        Перепелятник
-                                    </p>
-                                    <p class="preview-list-item__desc">
-                                        г. Данков, Липецкая область
+                                        Строительство 9-ти мостов стартует в столице в 2019 году
                                     </p>
                                     <div class="preview-list-item__date">
                                         <div class="preview-list-item__date_icon">
@@ -214,20 +209,17 @@
                                                 <use xlink:href="img/sprite.svg#date-icon-small"></use>
                                             </svg>
                                         </div>
-                                        <p class="preview-list-item__date_text">март <span>2018</span></p> 
+                                        <p class="preview-list-item__date_text">15 декабря <span>2018</span></p> 
                                     </div>
                                 </a>
                             </div>
                             <div class="preview-list-item">
                                 <a href="#" class="preview-list-item-link">
                                     <div class="preview-list-item__img">
-                                        <img src="img/building-detail-img3.jpg" alt="preview">
+                                        <img src="img/news-detail-img5.jpg" alt="preview">
                                     </div>
                                     <p class="preview-list-item__title">
-                                        Автосалон
-                                    </p>
-                                    <p class="preview-list-item__desc">
-                                        г. Спасск-Рязанский, Рязанская область
+                                        Строительство автомобильной дороги М11 Москва – Санкт-Петербург
                                     </p>
                                     <div class="preview-list-item__date">
                                         <div class="preview-list-item__date_icon">
@@ -235,7 +227,7 @@
                                                 <use xlink:href="img/sprite.svg#date-icon-small"></use>
                                             </svg>
                                         </div>
-                                        <p class="preview-list-item__date_text">октябрь <span>2017</span></p> 
+                                        <p class="preview-list-item__date_text">15 декабря <span>2018</span></p> 
                                     </div>
                                 </a>
                             </div>
@@ -246,7 +238,7 @@
 
         </section>
     </main>
-    <footer id="footer" class="footer">
+    <!-- <footer id="footer" class="footer">
         <div class="footer-top" style="background-image: url('img/footer-bg.jpg');">
             <div class="footer-top-left">
                 <a href="#" class="footer-top-left-logo">
@@ -369,8 +361,8 @@
                 </div>
             </div>
         </div>
-    </footer>
-
+    </footer> -->
+    
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/function.js"></script>
