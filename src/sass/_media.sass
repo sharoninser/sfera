@@ -65,15 +65,146 @@
 
 
 
-    // .page-catalog
-    //     .screen
-    //         &-catalog
-    //             &-list
-    //                 &-item
-    //                     &:hover 
-    //                         .screen-catalog-list-item-text__link
-    //                             top: 0
-    //                             transition: top .3s
+    a.button-hover
+        // transition: all .3s
+        svg
+            transition: all .3s
+        span
+            transition: all .3s
+
+    a.button-hover:hover
+        color: #fff!important
+        // transition: all .3s
+        svg
+            fill: #63cdd7!important
+            transition: all .3s
+        span
+            color:  #fff!important
+            transition: all .3s
+
+
+    a.hover-dark
+        transition: all .3s
+        span
+            transition: all .3s
+
+    a.hover-dark:hover
+        color:  #63cdd7!important
+        transition: all .3s
+        span
+            color:  #63cdd7!important
+            transition: all .3s
+
+
+    a.hover-light
+        transition: all .3s
+        span
+            transition: all .3s
+
+    a.hover-light:hover
+        color:  #ffffff!important
+        transition: all .3s
+        span
+            color:  #ffffff!important
+            transition: all .3s
+
+
+    a.hover-primary
+        transition: all .3s
+        svg 
+            fill: #a0c5cf!important
+            transition: all .3s
+        span
+            transition: all .3s
+    a.hover-primary:hover
+        color: #a0c5cf!important
+        transition: all .3s
+        svg 
+            fill: #242c2e!important
+            transition: all .3s
+        span
+            color: #a0c5cf!important
+            transition: all .3s
+
+
+
+    a.hover-secondary
+        transition: all .3s
+        svg 
+            fill: #63cdd7!important
+            transition: all .3s
+        span
+            transition: all .3s
+    a.hover-secondary:hover
+        color:#63cdd7!important
+        transition: all .3s
+        svg 
+            fill: #fff!important
+            transition: all .3s
+        span
+            color: #63cdd7!important
+            transition: all .3s
+
+    a.inline-hover
+        transition: all .3s
+    a.inline-hover:hover
+        transition: all .3s
+        color: #63cdd7!important
+
+
+
+    .page-catalog 
+        .screen-catalog-list
+            &-filter
+                &-item 
+                    a
+                        transition: all .3s
+                    a:not(.active):hover
+                        color: #1291b6
+                        transition: all .3s
+
+
+
+    .footer
+        &-top
+            &-main
+                &-address
+                    &-item
+                        a
+                            transition: all .3s
+                        svg 
+                            transition: all .3s
+                            fill:  #63cdd7
+
+                    &-item:hover
+                        a
+                            transition: all .3s
+                            color: #63cdd7
+                        svg 
+                            transition: all .3s
+                            fill: #fff
+    
+    .screen
+        &-slider
+            &-nav
+                &-arrow:hover
+                    svg
+                        transition: all .3s
+                        fill: #63cdd7!important
+
+    .page-building 
+        .screen-view-slider-arrow:hover
+            svg
+                transition: all .3s
+                fill: #63cdd7!important
+
+
+    .form-button-hover
+        transition: all .3s
+    .form-button-hover:hover
+        color:  #ffffff!important
+        background-color:  #0093b7!important
+        transition: all .3s
 
 
 @media screen and (max-width: 1700px)
@@ -185,10 +316,16 @@
             &-list
                 &-item
                     width: calc(33.333% - 34px)
+                &::before
+                    width: calc(33.333% - 34px)
     .section-preview.type_2
         .preview
             &-list
                 &-item
+                    width: calc(25% - 44px)
+                &::before
+                    width: calc(25% - 44px)
+                &::after
                     width: calc(25% - 44px)
 
 
@@ -213,6 +350,8 @@
                     &-item
                         width: calc(33.333% - 27px)
                         margin-bottom: 37px
+                        &-text 
+                            min-height: 60px
                         &__date 
                             left: -27px
                         &__title
@@ -228,7 +367,7 @@
                     &-pagination
                         margin-bottom: 100px
                     &-block
-                        margin-bottom: 70px
+                        margin-bottom: 33px
                     &-filter
                         &-block
                             margin-top: 0
@@ -281,6 +420,17 @@
 
     .header
         height: 60px
+
+
+    .btn-scroll-up
+        min-width: 60px
+        width: 60px
+        span.detail-up
+            display: none
+        a 
+            span 
+                svg 
+                    margin-right: 0
     .screen
         &-left 
             &-step 
@@ -438,6 +588,8 @@
                     &__desc
                         font-size: 12px
                         line-height: 22px
+                &::before
+                    width: calc(33.333% - 25px)
 
 
     .section-preview.type_2
@@ -450,6 +602,10 @@
                     &__title
                         font-size: 13px
                         line-height: 20px
+                &::before
+                    width: calc(25% - 25px)
+                &::after
+                    width: calc(25% - 25px)
 
 
     .section
@@ -496,7 +652,7 @@
                             p:not(.screen-object-desc-location)
                                 font-size: 16px
                                 line-height: 30px
-                                margin-bottom: 40px
+                                margin-bottom: 20px
                         &-location
                             margin-bottom: 15px
                             span 
@@ -562,10 +718,12 @@
         .screen.screen-one.light
             .screen-catalog-list.type_1 
                 .screen-catalog-list
-                    &-item:nth-last-child(-n+3)
-                        margin-bottom: 37px
+                    // &-item:nth-last-child(-n+3)
+                    //     margin-bottom: 37px
                     &-item
                         width: calc(50% - 27px)
+                        &-text 
+                            min-height: 68px
                         &__title
                             font-size: 16px
                             line-height: 24px
@@ -594,8 +752,8 @@
                 .screen-catalog-list
                     &-block
                         margin-bottom: 70px
-                    &-item:nth-last-child(-n+4)
-                        margin-bottom: 37px
+                    // &-item:nth-last-child(-n+4)
+                    //     margin-bottom: 37px
                     &-item
                         width: calc(50% - 27px)
                         margin-bottom: 37px
@@ -846,10 +1004,14 @@
     .section-preview.type_1
         .preview
             &-list
-                &-item:last-child 
+                &-item:last-child
                     display: none
+                &-item:first-child, &-item:nth-of-type(2)
+                    display: block                    
                 &-item
                     width: calc(50% - 20px)
+                &::before
+                    display: none
 
 
     .section-preview.type_2
@@ -857,8 +1019,13 @@
             &-list
                 &-item:nth-last-child(2), &-item:last-child
                     display: none
+                &-item:first-child, &-item:nth-of-type(2)
+                    display: block  
                 &-item
                     width: calc(50% - 20px)
+                &::after, &::before
+                    display: none
+                    
 
 
     .section
@@ -1315,7 +1482,13 @@
                                     height: 14px
                             &_text
                                 font-size: 13px
-
+    .page-catalog
+        .screen.screen-one.light
+            .screen-catalog-list.type_1
+                .screen-catalog-list
+                    &-item
+                        &-text 
+                            min-height: 50px
 
     .header
         height: 50px
@@ -1537,6 +1710,8 @@
                         max-width: 100%
                         margin-right: 0
                         width: 100% 
+                        img 
+                            height: auto
                     &-info 
                         width: 100%
                         margin-top: 20px
@@ -1924,8 +2099,8 @@
         .screen.screen-one.light
             .screen-catalog-list.type_1, .screen-catalog-list.type_2
                 .screen-catalog-list
-                    &-item:nth-last-child(-n+3)
-                        margin-bottom: 25px
+                    // &-item:nth-last-child(-n+3)
+                    //     margin-bottom: 25px
                     &-item
                         width: 100%
                         margin-bottom: 25px
@@ -1950,8 +2125,8 @@
         .screen.screen-one.light
             .screen-catalog-list.type_2
                 .screen-catalog-list
-                    &-item:nth-last-child(-n+4)
-                        margin-bottom: 25px
+                    // &-item:nth-last-child(-n+4)
+                    //     margin-bottom: 25px
 
 
     .header

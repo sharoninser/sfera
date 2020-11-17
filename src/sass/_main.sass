@@ -295,13 +295,18 @@
                 &-wrap
                     display: flex
                     align-items: center
+                    height: 100%
                 &__img
                     width: 100%
                     max-width: 280px
                     margin-right: 30px
+                    height: 100%
                     img
                         display: block
                         max-width: 100%
+                        object-fit: cover
+                        width: 100%
+                        height: 100%
                 &-info
                     p + p
                         margin-top: 0
@@ -362,6 +367,7 @@
         &-slider
             position: relative
             &-item
+                height: auto
                 &__review
                     margin-bottom: 80px
                     p + p 
@@ -418,9 +424,24 @@
         &-slider
             margin-bottom: 60px
             &-item
+                &-wrap
+                    display: flex
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    &::after, &::before
+                        content: ''
+                        width: calc(22% - 20px)
+                    &::before
+                        order: 999
                 &__img
                     img
                         display: block
+                &__logo 
+                    width: calc(22% - 20px)
+                    img
+                        object-fit: cover
+                        width: 100%
+                        height: auto
 
 
 
@@ -623,6 +644,10 @@
                 font-size: 17px
                 line-height: 24px
                 max-width: 380px
+        &::before
+            width: calc(33.333% - 44px)
+            content: ''
+            order: 999 
 .section-preview.type_2
     padding-bottom: 133px
     .preview-list
@@ -634,6 +659,13 @@
                 font-size: 14px
                 line-height: 20px
                 max-width: 100%
+        &::before
+            width: calc(25% - 44px)
+            content: ''
+            order: 999 
+        &::after
+            width: calc(25% - 44px)
+            content: ''
 
 .section-preview
     padding-top: 106px
@@ -667,6 +699,7 @@
 .preview-list
     display: flex
     justify-content: space-between
+    flex-wrap: wrap
     &-item
         position: relative
         &-link
@@ -935,6 +968,7 @@
                         fill: #fff
                         width: 12px
                         height: 10px
+                        transition: all .3s
                     &_prev
                         left: -52px
                     &_next
@@ -980,6 +1014,7 @@
                             text-transform: uppercase
                             text-decoration: none
                             white-space: nowrap
+                            border-bottom: 2px solid transparent
                         a.active 
                             color: #1291b6 
                             border-bottom: 2px solid #1291b6
@@ -987,7 +1022,7 @@
                     display: flex
                     justify-content: space-between
                     flex-wrap: wrap
-                    margin-bottom: 100px
+                    margin-bottom: 63px
                 &-item
                     &-text 
                         position: relative
@@ -1046,6 +1081,7 @@
                     width: 100%
                     height: 48px
                     margin-bottom: 121px
+                    cursor: pointer
                     svg
                         width: 12px
                         height: 12px
@@ -1059,8 +1095,8 @@
                     &::after
                         width: calc(33.333% - 43px)
                         content: ''
-                &-item:nth-last-child(-n+3)
-                    margin-bottom: 0
+                // &-item:nth-last-child(-n+3)
+                //     margin-bottom: 0
                 &-item
                     display: flex
                     flex-direction: column
@@ -1069,6 +1105,7 @@
                     width: calc(33.333% - 43px)
                     &-text
                         flex-grow: 1
+                        min-height: 68px
                     &__img
                         height: auto
                         width: 100%
@@ -1116,8 +1153,8 @@
                         width: calc(25% - 48px)
                         content: ''
                         order: 999
-                &-item:nth-last-child(-n+4)
-                    margin-bottom: 0
+                // &-item:nth-last-child(-n+4)
+                //     margin-bottom: 0
                 &-item
                     display: flex
                     flex-direction: column
@@ -1126,6 +1163,7 @@
                     width: calc(25% - 48px)
                     &-text
                         flex-grow: 1
+                        min-height: 60px
                     &__img
                         height: auto
                         width: 100%
@@ -1165,7 +1203,11 @@
                             font-weight: 400
                             line-height: 32px
                             margin-top: 0
+                            margin-bottom: 0
+                        p:last-of-type 
                             margin-bottom: 53px
+                        p:not(.screen-object-desc-location) + p 
+                            margin-top: 20px
                     &-location
                         display: flex
                         align-items: flex-end
@@ -1288,6 +1330,9 @@
                         margin-bottom: 17px
                     &-link + .screen-contacts-item-link 
                         margin-top: 10px
+                    &-link
+                        svg 
+                            fill: #63cdd7
                     &-link.location
                         svg
                             width: 17px
@@ -1727,16 +1772,16 @@
             display: flex
             align-items: center
             justify-content: center
-            color: #ffffff
             font-size: 15px
             line-height: 17px
             text-transform: uppercase
-            background-color: #0093b7
             width: 100%
             height: 67px
             max-width: 413px
             border: none
             cursor: pointer
             border-radius: 0
+            color: #000000
+            background-color: #61cfd7
 
 

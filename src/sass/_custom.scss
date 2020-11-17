@@ -178,5 +178,10 @@ p + p {
 .screen-slider-nav-arrow svg {
     width: 12px;
     height: 10px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
 }
 
