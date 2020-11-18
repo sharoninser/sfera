@@ -422,7 +422,7 @@
 .screen
     &-partners
         &-slider
-            margin-bottom: 60px
+            margin-bottom: 40px
             &-item
                 &-wrap
                     display: flex
@@ -430,18 +430,30 @@
                     flex-wrap: wrap
                     &::after, &::before
                         content: ''
-                        width: calc(22% - 20px)
+                        width: 25%
                     &::before
                         order: 999
                 &__img
                     img
                         display: block
                 &__logo 
-                    width: calc(22% - 20px)
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    width: 25%
+                    height: 180px
+                    margin-bottom: 10px
                     img
                         object-fit: cover
                         width: 100%
                         height: auto
+                        max-width: 180px
+
+.screen-block.screen-block-partners
+    .screen
+        &-slider
+            &-nav
+                margin-left: 60px
 
 
 
@@ -456,7 +468,7 @@
     .screen
         &-main
             position: relative
-            p.screen-main__text
+            .screen-main__text
                 margin-bottom: 5%
             &-date
                 display: flex
@@ -508,9 +520,11 @@
             margin-top: 100px
         article
             h2 
-                margin-bottom: 15px
+                margin: 15px 0
+            h3 
+                margin: 10px 0
             h4
-                margin-top: 35px
+                margin: 10px 0
             p + p
                 margin-top: 40px
             p
@@ -518,6 +532,7 @@
                 font-weight: 300
                 color: #1f272a
                 line-height: 32px
+                margin: 15px 0
             a
                 color: #1291b6
                 text-decoration: none
@@ -530,7 +545,7 @@
                 list-style-type: disc
             ul, ol
                 padding-left: 55px
-                margin-bottom: 25px
+                margin: 25px 0
                 li + li
                     margin-top: 17px
                 li 
@@ -1193,10 +1208,11 @@
                 &-desc
                     display: flex
                     justify-content: space-between
+                    padding-bottom: 190px
                     &-left
                         padding-top: 33px
                         width: calc(33.5% - 45px)
-                        margin-bottom: 190px
+                        // margin-bottom: 190px
                         p:not(.screen-object-desc-location)
                             color: #1f272a
                             font-size: 18px
